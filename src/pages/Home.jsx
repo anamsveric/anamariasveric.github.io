@@ -126,7 +126,7 @@ export default function Hero() {
           </div>
 
           <div className="space-y-4">
-            <p className="font-body text-ink/70 leading-relaxed">Pasioniran sam oko web developmenta — od prvih wireframeova do deployanja gotovog projekta. Volim kada tehnologija i dizajn rade zajedno bez kompromisa.</p>
+            <p className="font-body text-ink/70 leading-relaxed">TestTestTestTestTest.</p>
             <p className="font-body text-ink/70 leading-relaxed">{t.about.p2}</p>
             <div className="flex flex-wrap gap-2 pt-2">
               {['React', 'Node.js', 'JavaScript', 'Tailwind CSS', 'Git'].map((tech) => (
@@ -171,7 +171,7 @@ export default function Hero() {
                 href="tel:+385911234567"
                 className="font-body text-lg text-ink hover:text-accent transition-colors duration-300"
               >
-                +385 91 123 4567
+                +385 
               </a>
             </div>
           </div>
