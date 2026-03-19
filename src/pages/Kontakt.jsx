@@ -20,7 +20,6 @@ export default function Kontakt() {
   return (
     <main className="min-h-screen">
 
-      {/* Cijela stranica — ljubičasta pozadina kao Početna */}
       <section className="relative overflow-hidden min-h-screen flex flex-col justify-center">
         <div className="absolute inset-0 bg-gradient-to-br from-[#3D1278] via-[#1E0A4E] to-[#0E0630] pointer-events-none" />
         <div className="absolute top-0 left-0 w-[700px] h-[550px] bg-gradient-to-br from-orange-400/40 via-rose-500/25 to-transparent rounded-full blur-[90px] pointer-events-none" />
