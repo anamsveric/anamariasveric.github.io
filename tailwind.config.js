@@ -7,9 +7,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        display: ['Comic Sans MS', 'Comic Sans', 'cursive'],
-        body: ['Comic Sans MS', 'Comic Sans', 'cursive'],
-        mono: ['Comic Sans MS', 'Comic Sans', 'cursive'],
+        display: ['Comic Neue', 'Comic Sans MS', 'cursive'],
+        body: ['Comic Neue', 'Comic Sans MS', 'cursive'],
+        mono: ['Comic Neue', 'Comic Sans MS', 'cursive'],
       },
       colors: {
         cream: '#160840',
