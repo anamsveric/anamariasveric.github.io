@@ -7,16 +7,17 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        display: ['Playfair Display', 'Georgia', 'serif'],
-        body: ['DM Sans', 'sans-serif'],
-        mono: ['JetBrains Mono', 'monospace'],
+        display: ['Comic Sans MS', 'Comic Sans', 'cursive'],
+        body: ['Comic Sans MS', 'Comic Sans', 'cursive'],
+        mono: ['Comic Sans MS', 'Comic Sans', 'cursive'],
       },
       colors: {
-        cream: '#F5F0E8',
-        ink: '#1A1A1A',
-        accent: '#C84B31',
-        muted: '#8A8070',
-        surface: '#EDEAD8',
+        cream: '#160840',
+        ink: '#FFFFFF',
+        accent: '#6B4FFF',
+        muted: '#B8A0D8',
+        surface: '#2A1060',
+        dark: '#1E0A4E',
       },
       animation: {
         'fade-up': 'fadeUp 0.7s ease forwards',

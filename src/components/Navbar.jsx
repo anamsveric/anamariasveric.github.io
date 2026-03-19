@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { useLang } from '../context/LanguageContext'
 
@@ -10,105 +10,101 @@ const LANGUAGES = [
 ]
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const location = useLocation()
   const { lang, setLang, t } = useLang()
 
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20)
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
-  const LangSwitcher = () => (
-    <div className="flex items-center gap-1">
-      {LANGUAGES.map(({ code, flag }) => (
-        <button
-          key={code}
-          onClick={() => setLang(code)}
-          title={code}
-          className={`text-lg leading-none px-1 py-0.5 rounded transition-all duration-200 ${
-            lang === code
-              ? 'opacity-100 scale-110'
-              : 'opacity-35 hover:opacity-70'
-          }`}
-        >
-          {flag}
-        </button>
-      ))}
-    </div>
-  )
+  const navLinks = [
+    { to: '/', label: t.nav.home },
+    { to: '/projekti', label: t.nav.projects },
+    { to: '/kontakt', label: t.nav.contact },
+  ]
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? 'bg-cream/90 backdrop-blur-md border-b border-ink/10 py-3'
-          : 'bg-transparent py-6'
-      }`}
-    >
-      <div className="max-w-5xl mx-auto px-6 flex items-center justify-between">
+    <nav className="fixed top-4 left-4 right-4 z-50 max-w-6xl mx-auto" style={{ left: '50%', transform: 'translateX(-50%)', width: 'calc(100% - 2rem)' }}>
+      <div className="bg-white/90 backdrop-blur-md rounded-full shadow-lg px-5 py-2.5 flex items-center justify-between">
 
-        {/* Lijevo — prazan prostor za balans (desktop) */}
-        <div className="hidden md:block w-24" />
+        {/* Lijevo — Dobrodošli */}
+        <Link to="/" className="font-body font-semibold text-base text-ink tracking-wide hover:text-accent transition-colors duration-300 shrink-0">
+          {t.nav.welcome}
+        </Link>
 
         {/* Sredina — nav linkovi (desktop) */}
-        <div className="hidden md:flex items-center gap-10">
-          <Link
-            to="/"
-            className={`font-body text-sm font-medium tracking-wide transition-colors duration-300 relative group ${
-              location.pathname === '/' ? 'text-accent' : 'text-ink/70 hover:text-ink'
-            }`}
-          >
-            {t.nav.home}
-            <span className={`absolute -bottom-0.5 left-0 h-px bg-accent transition-all duration-300 ${location.pathname === '/' ? 'w-full' : 'w-0 group-hover:w-full'}`} />
-          </Link>
-
-          <Link
-            to="/projekti"
-            className={`font-body text-sm font-medium tracking-wide transition-colors duration-300 relative group ${
-              location.pathname === '/projekti' ? 'text-accent' : 'text-ink/70 hover:text-ink'
-            }`}
-          >
-            {t.nav.projects}
-            <span className={`absolute -bottom-0.5 left-0 h-px bg-accent transition-all duration-300 ${location.pathname === '/projekti' ? 'w-full' : 'w-0 group-hover:w-full'}`} />
-          </Link>
+        <div className="hidden md:flex items-center gap-8">
+          {navLinks.map(({ to, label }) => (
+            <Link
+              key={to}
+              to={to}
+              className={`font-body text-sm font-medium tracking-wide transition-colors duration-300 ${
+                location.pathname === to ? 'text-blue-600' : 'text-ink/60 hover:text-ink'
+              }`}
+            >
+              {label}
+            </Link>
+          ))}
         </div>
 
-        {/* Desno — zastavice (desktop) */}
-        <div className="hidden md:block">
-          <LangSwitcher />
+        {/* Desno — lang switcher */}
+        <div className="hidden md:flex items-center gap-1 shrink-0">
+          {LANGUAGES.map(({ code, flag }) => (
+            <button
+              key={code}
+              onClick={() => setLang(code)}
+              title={code}
+              className={`text-base leading-none w-8 h-8 rounded-full flex items-center justify-center transition-all duration-200 ${
+                lang === code
+                  ? 'bg-accent/15 ring-1 ring-accent scale-110'
+                  : 'opacity-40 hover:opacity-70'
+              }`}
+            >
+              {flag}
+            </button>
+          ))}
         </div>
 
-        {/* Mobitel — hamburger lijevo + zastavice desno */}
-        <div className="md:hidden flex items-center justify-between w-full">
+        {/* Mobitel — hamburger */}
+        <div className="md:hidden flex items-center gap-3">
+          <div className="flex items-center gap-0.5">
+            {LANGUAGES.map(({ code, flag }) => (
+              <button
+                key={code}
+                onClick={() => setLang(code)}
+                title={code}
+                className={`text-base leading-none w-7 h-7 rounded-full flex items-center justify-center transition-all duration-200 ${
+                  lang === code
+                    ? 'bg-accent/15 ring-1 ring-accent scale-110'
+                    : 'opacity-40 hover:opacity-70'
+                }`}
+              >
+                {flag}
+              </button>
+            ))}
+          </div>
           <button
             className="flex flex-col gap-1.5 p-1"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
           >
-            <span className={`block w-6 h-0.5 bg-ink transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-2' : ''}`} />
-            <span className={`block w-6 h-0.5 bg-ink transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
-            <span className={`block w-6 h-0.5 bg-ink transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+            <span className={`block w-5 h-0.5 bg-ink transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-2' : ''}`} />
+            <span className={`block w-5 h-0.5 bg-ink transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
+            <span className={`block w-5 h-0.5 bg-ink transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
           </button>
-          <LangSwitcher />
         </div>
       </div>
 
       {/* Mobile menu */}
-      <div
-        className={`md:hidden overflow-hidden transition-all duration-300 ${
-          menuOpen ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'
-        }`}
-      >
-        <div className="bg-cream/95 backdrop-blur-md border-t border-ink/10 px-6 py-4 flex flex-col gap-4">
-          <Link to="/" onClick={() => setMenuOpen(false)} className={`font-body text-base font-medium ${location.pathname === '/' ? 'text-accent' : 'text-ink/70'}`}>
-            {t.nav.home}
-          </Link>
-          <Link to="/projekti" onClick={() => setMenuOpen(false)} className={`font-body text-base font-medium ${location.pathname === '/projekti' ? 'text-accent' : 'text-ink/70'}`}>
-            {t.nav.projects}
-          </Link>
+      <div className={`md:hidden overflow-hidden transition-all duration-300 ${menuOpen ? 'max-h-48 opacity-100 mt-2' : 'max-h-0 opacity-0'}`}>
+        <div className="bg-white/95 backdrop-blur-md rounded-2xl shadow-lg px-6 py-4 flex flex-col gap-4">
+          {navLinks.map(({ to, label }) => (
+            <Link
+              key={to}
+              to={to}
+              onClick={() => setMenuOpen(false)}
+              className={`font-body text-base font-medium ${location.pathname === to ? 'text-accent' : 'text-ink/70'}`}
+            >
+              {label}
+            </Link>
+          ))}
         </div>
       </div>
     </nav>
