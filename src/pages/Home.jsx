@@ -14,15 +14,16 @@ export default function Home() {
   }, [])
 
   return (
-    <main ref={heroRef} className="h-screen flex flex-col">
+    <main ref={heroRef} className="h-screen flex flex-col relative overflow-hidden">
 
-      {/* Hero section — tamna pozadina */}
-      <section className="relative bg-dark overflow-hidden flex-1 flex items-center">
-        {/* Gradient — živahna ljubičasta + topla narančasta kao na referenci */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#3D1278] via-[#1E0A4E] to-[#0E0630] pointer-events-none" />
-        <div className="absolute top-0 left-0 w-[700px] h-[550px] bg-gradient-to-br from-orange-400/40 via-rose-500/25 to-transparent rounded-full blur-[90px] pointer-events-none" />
-        <div className="absolute top-0 right-0 w-[650px] h-[650px] bg-violet-500/40 rounded-full blur-[110px] pointer-events-none" />
-        <div className="absolute bottom-0 right-1/4 w-[400px] h-[300px] bg-purple-600/30 rounded-full blur-[80px] pointer-events-none" />
+      {/* Gradijent pozadina — isti kao na ostalim stranicama */}
+      <div className="fixed inset-0 bg-gradient-to-br from-[#3D1278] via-[#1E0A4E] to-[#0E0630] -z-10" />
+      <div className="fixed top-0 left-0 w-[700px] h-[550px] bg-gradient-to-br from-orange-400/40 via-rose-500/25 to-transparent rounded-full blur-[90px] -z-10 pointer-events-none" />
+      <div className="fixed top-0 right-0 w-[650px] h-[650px] bg-violet-500/40 rounded-full blur-[110px] -z-10 pointer-events-none" />
+      <div className="fixed bottom-0 right-1/4 w-[400px] h-[300px] bg-purple-600/30 rounded-full blur-[80px] -z-10 pointer-events-none" />
+
+      {/* Hero section */}
+      <section className="relative flex-1 flex items-center">
 
         <div className="relative z-10 max-w-6xl mx-auto px-6 pt-20 pb-6 w-full grid md:grid-cols-2 gap-12 items-center">
 

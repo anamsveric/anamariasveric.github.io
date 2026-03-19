@@ -26,7 +26,7 @@ export default function Navbar() {
       <div className="bg-white/90 backdrop-blur-md rounded-full shadow-lg px-5 py-2.5 flex items-center justify-between">
 
         {/* Lijevo — Dobrodošli */}
-        <Link to="/" className="font-body font-semibold text-base text-ink tracking-wide hover:text-accent transition-colors duration-300 shrink-0">
+        <Link to="/" className="font-body font-semibold text-base text-black tracking-wide hover:text-blue-600 transition-colors duration-300 shrink-0">
           {t.nav.welcome}
         </Link>
 
@@ -37,7 +37,7 @@ export default function Navbar() {
               key={to}
               to={to}
               className={`font-body text-sm font-medium tracking-wide transition-colors duration-300 ${
-                (to === '/' ? location.pathname === '/' : location.pathname.startsWith(to)) ? 'text-blue-600' : 'text-ink/60 hover:text-ink'
+                (to === '/' ? location.pathname === '/' : location.pathname.startsWith(to)) ? 'text-blue-600' : 'text-black hover:text-blue-600'
               }`}
             >
               {label}
@@ -86,9 +86,9 @@ export default function Navbar() {
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
           >
-            <span className={`block w-5 h-0.5 bg-ink transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-2' : ''}`} />
-            <span className={`block w-5 h-0.5 bg-ink transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
-            <span className={`block w-5 h-0.5 bg-ink transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+            <span className={`block w-5 h-0.5 bg-gray-900 transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-2' : ''}`} />
+            <span className={`block w-5 h-0.5 bg-gray-900 transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
+            <span className={`block w-5 h-0.5 bg-gray-900 transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
           </button>
         </div>
       </div>
@@ -101,7 +101,7 @@ export default function Navbar() {
               key={to}
               to={to}
               onClick={() => setMenuOpen(false)}
-              className={`font-body text-base font-medium ${location.pathname === to ? 'text-accent' : 'text-ink/70'}`}
+              className={`font-body text-base font-medium ${location.pathname === to ? 'text-blue-600' : 'text-black'}`}
             >
               {label}
             </Link>

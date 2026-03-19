@@ -1,7 +1,21 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:the7.io)"
+      "WebFetch(domain:the7.io)",
+      "Bash(netstat -ano)",
+      "Bash(findstr :5173)",
+      "Bash(tasklist)",
+      "Bash(findstr \"17284\")",
+      "Bash(taskkill /PID 17284 /F)",
+      "Bash(cmd /c \"taskkill /PID 17284 /F\")",
+      "Bash(findstr \":5173 \")",
+      "Bash(cmd /c \"wmic process where ProcessId=17284 get CommandLine\")",
+      "Bash(cmd /c \"powershell -Command \"\"Get-Process -Id 17284 | Select-Object Id,ProcessName,CPU,StartTime\"\"\")",
+      "Bash(cmd /c \"powershell -Command \"\"Stop-Process -Id 17284 -Force; Write-Output ''Done''\"\"\")",
+      "Bash(cmd /c \"netstat -ano | findstr LISTENING | findstr :5173\")",
+      "Bash(cmd /c \"tasklist | findstr node.exe\")",
+      "Bash(cmd /c \"type node_modules\\\\@vitejs\\\\plugin-react\\\\package.json | findstr version\")",
+      "Bash(npm install:*)"
     ]
   }
 }
