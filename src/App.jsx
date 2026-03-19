@@ -14,7 +14,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/projekti" element={<Projekti />} />
         <Route path="/kontakt" element={<Kontakt />} />
-        <Route path="/hobiji/web" element={<HobijiWeb />} />
+        <Route path="/hobiji" element={<HobijiWeb />} />
       </Routes>
     </LanguageProvider>
   )

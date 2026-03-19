@@ -1,0 +1,198 @@
+{
+  "HR": {
+    "nav": {
+      "home": "Početna",
+      "projects": "Projekti",
+      "contact": "Kontakt",
+      "hobbies": "Hobiji",
+      "welcome": "Dobrodošli"
+    },
+    "hero": {
+      "available": "dostupna za projekte",
+      "title": "Pravo mjesto",
+      "title_accent": "za izradu",
+      "title_end": "weba",
+      "cta_contact": "Kontaktiraj me",
+      "cta_projects": "Pogledaj projekte",
+      "photo": "foto",
+      "cv_updated": "ažurirano"
+    },
+    "about": {
+      "label": "— o meni",
+      "title": "Početak ...",
+      "title_italic": "",
+      "p1": "Ova stranica koju gledate je također dio projekta samostalne izrade te će sadržavat sve radove koje napravim na jednom mjestu. Također, svaki zasebni projekt će bit povezan ovdje.",
+      "p2": "Fokusirana sam na moderan web razvoj, ali uvijek gledam širu sliku — korisničko iskustvo, performanse i kod koji je lako čitati i nadograđivati."
+    },
+    "projects": {
+      "label": "— moji radovi",
+      "title": "Projekti",
+      "open": "Otvori projekt",
+      "dogs_label": "— hobiji",
+      "dogs_title": "Psi",
+      "dogs_soon": "Stranica u izradi — uskoro dostupno."
+    },
+    "hobbies": {
+      "label": "— hobiji",
+      "title": "Provođenje slobodnog vremena",
+      "subtitle": "Psi",
+      "coming_soon": "Stranica u izradi — uskoro dostupno."
+    },
+    "contact": {
+      "label": "— kontakt",
+      "write": "Pišite mi!",
+      "phone_label": "Telefon",
+      "social_label": "Društvene mreže",
+      "cv_label": "CV",
+      "footer_rights": "Sva prava pridržana.",
+      "footer_made": "Napravljeno s React + Tailwind"
+    }
+  },
+  "EN": {
+    "nav": {
+      "home": "Home",
+      "projects": "Projects",
+      "contact": "Contact",
+      "hobbies": "Hobbies",
+      "welcome": "Welcome"
+    },
+    "hero": {
+      "available": "available for projects",
+      "title": "The right place",
+      "title_accent": "to build",
+      "title_end": "your website",
+      "cta_contact": "Contact me",
+      "cta_projects": "View projects",
+      "photo": "photo",
+      "cv_updated": "updated"
+    },
+    "about": {
+      "label": "— about me",
+      "title": "Beginning ...",
+      "title_italic": "",
+      "p1": "This website you are looking at is also part of a self-made project and will contain all the work I do in one place. Also, each individual project will be linked here.",
+      "p2": "Focused on modern web development, but always looking at the bigger picture — user experience, performance, and code that is easy to read and extend."
+    },
+    "projects": {
+      "label": "— my work",
+      "title": "Projects",
+      "open": "Open project",
+      "dogs_label": "— hobbies",
+      "dogs_title": "Dogs",
+      "dogs_soon": "Page in progress — coming soon."
+    },
+    "hobbies": {
+      "label": "— hobbies",
+      "title": "Spending free time",
+      "subtitle": "Dogs",
+      "coming_soon": "Page in progress — coming soon."
+    },
+    "contact": {
+      "label": "— contact",
+      "write": "Write to me!",
+      "phone_label": "Phone",
+      "social_label": "Social media",
+      "cv_label": "CV",
+      "footer_rights": "All rights reserved.",
+      "footer_made": "Built with React + Tailwind"
+    }
+  },
+  "DE": {
+    "nav": {
+      "home": "Startseite",
+      "projects": "Projekte",
+      "contact": "Kontakt",
+      "hobbies": "Hobbys",
+      "welcome": "Willkommen"
+    },
+    "hero": {
+      "available": "verfügbar für Projekte",
+      "title": "Der richtige Ort",
+      "title_accent": "für Ihre",
+      "title_end": "Website",
+      "cta_contact": "Kontaktiere mich",
+      "cta_projects": "Projekte ansehen",
+      "photo": "Foto",
+      "cv_updated": "aktualisiert"
+    },
+    "about": {
+      "label": "— über mich",
+      "title": "Anfang ...",
+      "title_italic": "",
+      "p1": "Diese Website, die Sie gerade sehen, ist auch Teil eines selbst erstellten Projekts und wird alle meine Arbeiten an einem Ort enthalten. Außerdem wird jedes einzelne Projekt hier verlinkt.",
+      "p2": "Fokussiert auf moderne Webentwicklung, aber immer mit Blick auf das große Ganze — Benutzererfahrung, Performance und Code, der leicht zu lesen und zu erweitern ist."
+    },
+    "projects": {
+      "label": "— meine Arbeiten",
+      "title": "Projekte",
+      "open": "Projekt öffnen",
+      "dogs_label": "— Hobbys",
+      "dogs_title": "Hunde",
+      "dogs_soon": "Seite in Bearbeitung — demnächst verfügbar."
+    },
+    "hobbies": {
+      "label": "— Hobbys",
+      "title": "Freizeitgestaltung",
+      "subtitle": "Hunde",
+      "coming_soon": "Seite in Bearbeitung — demnächst verfügbar."
+    },
+    "contact": {
+      "label": "— Kontakt",
+      "write": "Schreib mir!",
+      "phone_label": "Telefon",
+      "social_label": "Soziale Medien",
+      "cv_label": "Lebenslauf",
+      "footer_rights": "Alle Rechte vorbehalten.",
+      "footer_made": "Erstellt mit React + Tailwind"
+    }
+  },
+  "IT": {
+    "nav": {
+      "home": "Home",
+      "projects": "Progetti",
+      "contact": "Contatto",
+      "hobbies": "Hobby",
+      "welcome": "Benvenuti"
+    },
+    "hero": {
+      "available": "disponibile per progetti",
+      "title": "Il posto giusto",
+      "title_accent": "per creare",
+      "title_end": "il tuo sito",
+      "cta_contact": "Contattami",
+      "cta_projects": "Vedi progetti",
+      "photo": "foto",
+      "cv_updated": "aggiornato"
+    },
+    "about": {
+      "label": "— su di me",
+      "title": "Inizio ...",
+      "title_italic": "",
+      "p1": "Questo sito web che state guardando è anche parte di un progetto fatto da sola e conterrà tutto il lavoro che faccio in un unico posto. Inoltre, ogni singolo progetto sarà collegato qui.",
+      "p2": "Focalizzata sullo sviluppo web moderno, ma guardo sempre al quadro generale — esperienza utente, performance e codice facile da leggere ed estendere."
+    },
+    "projects": {
+      "label": "— i miei lavori",
+      "title": "Progetti",
+      "open": "Apri progetto",
+      "dogs_label": "— hobby",
+      "dogs_title": "Cani",
+      "dogs_soon": "Pagina in costruzione — disponibile a breve."
+    },
+    "hobbies": {
+      "label": "— hobby",
+      "title": "Tempo libero",
+      "subtitle": "Cani",
+      "coming_soon": "Pagina in costruzione — disponibile a breve."
+    },
+    "contact": {
+      "label": "— contatto",
+      "write": "Scrivimi!",
+      "phone_label": "Telefono",
+      "social_label": "Social media",
+      "cv_label": "CV",
+      "footer_rights": "Tutti i diritti riservati.",
+      "footer_made": "Realizzato con React + Tailwind"
+    }
+  }
+}

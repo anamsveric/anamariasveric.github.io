@@ -33,20 +33,22 @@ export default function Kontakt() {
             {t.contact.write}
           </h1>
 
-          <div className="flex flex-col md:flex-row gap-16">
+          {/* Email + Telefon u dva stupca */}
+          <div className="grid md:grid-cols-2 gap-12">
 
-            {/* Kontakt info */}
-            <div className="space-y-8">
-              <div>
-                <p className="font-mono text-xs text-white/40 tracking-widest uppercase mb-2">Email</p>
-                <a
-                  href="mailto:anamaria.sveric@gmail.com"
-                  className="font-body text-xl text-white hover:text-white/70 transition-colors duration-300 underline underline-offset-4 decoration-white/20"
-                >
-                  anamaria.sveric@gmail.com
-                </a>
-              </div>
+            {/* Email */}
+            <div>
+              <p className="font-mono text-xs text-white/40 tracking-widest uppercase mb-2">Email</p>
+              <a
+                href="mailto:anamaria.sveric@gmail.com"
+                className="font-body text-xl text-white hover:text-white/70 transition-colors duration-300 underline underline-offset-4 decoration-white/20"
+              >
+                anamaria.sveric@gmail.com
+              </a>
+            </div>
 
+            {/* Telefon + društvene mreže */}
+            <div className="space-y-6">
               <div>
                 <p className="font-mono text-xs text-white/40 tracking-widest uppercase mb-2">{t.contact.phone_label}</p>
                 <div className="flex items-center gap-3 flex-wrap">
@@ -64,27 +66,6 @@ export default function Kontakt() {
                       <path d="M16.494 14.24c-.423-.257-.826-.373-1.194-.14l-.97.615c-.37.235-.648.241-.973-.015-.67-.522-1.453-1.177-2.154-2.278-.698-1.099-.994-2.068-.965-2.892.018-.47.175-.672.481-.79l.97-.372c.368-.141.548-.42.462-.876l-.567-3.008c-.087-.456-.376-.619-.797-.506-.935.255-1.777.893-2.28 1.766C7.967 7.03 8.04 8.538 9.116 10.705c1.041 2.098 2.11 3.344 3.744 4.518 1.013.722 2.282 1.213 3.408.873.427-.128 1.005-.591 1.19-1.254.159-.575-.074-.91-.964-1.602z"/>
                     </svg>
                   </a>
-                </div>
-              </div>
-
-              {/* CV */}
-              <div>
-                <p className="font-mono text-xs text-white/40 tracking-widest uppercase mb-2">{t.contact.cv_label}</p>
-                <div className="flex items-center gap-3">
-                  <a
-                    href="/cv.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 font-mono text-xs text-white/50 hover:text-white transition-colors duration-300 border border-white/20 hover:border-white/50 px-3 py-1.5 rounded"
-                  >
-                    <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                    </svg>
-                    CV.pdf
-                  </a>
-                  {cvDate && (
-                    <span className="font-mono text-xs text-white/25">{t.hero.cv_updated} {cvDate}</span>
-                  )}
                 </div>
               </div>
 
@@ -109,6 +90,27 @@ export default function Kontakt() {
                   </a>
                 </div>
               </div>
+            </div>
+          </div>
+
+          {/* CV — ispod svega */}
+          <div className="mt-12 pt-8 border-t border-white/10">
+            <p className="font-mono text-xs text-white/40 tracking-widest uppercase mb-2">{t.contact.cv_label}</p>
+            <div className="flex items-center gap-3">
+              <a
+                href="/cv.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 font-mono text-xs text-white/50 hover:text-white transition-colors duration-300 border border-white/20 hover:border-white/50 px-3 py-1.5 rounded"
+              >
+                <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                CV.pdf
+              </a>
+              {cvDate && (
+                <span className="font-mono text-xs text-white/25">{t.hero.cv_updated} {cvDate}</span>
+              )}
             </div>
           </div>
         </div>

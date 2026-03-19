@@ -17,6 +17,7 @@ export default function Navbar() {
   const navLinks = [
     { to: '/', label: t.nav.home },
     { to: '/projekti', label: t.nav.projects },
+    { to: '/hobiji', label: t.nav.hobbies },
     { to: '/kontakt', label: t.nav.contact },
   ]
 
@@ -36,7 +37,7 @@ export default function Navbar() {
               key={to}
               to={to}
               className={`font-body text-sm font-medium tracking-wide transition-colors duration-300 ${
-                location.pathname === to ? 'text-blue-600' : 'text-ink/60 hover:text-ink'
+                (to === '/' ? location.pathname === '/' : location.pathname.startsWith(to)) ? 'text-blue-600' : 'text-ink/60 hover:text-ink'
               }`}
             >
               {label}
