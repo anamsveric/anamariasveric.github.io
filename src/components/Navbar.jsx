@@ -55,7 +55,7 @@ export default function Navbar() {
               onClick={() => setLang(code)}
               title={code}
               className={`leading-none w-8 h-8 rounded-full flex items-center justify-center transition-all duration-200 ${
-                isFirefox ? 'text-base' : 'text-[10px] font-bold text-gray-700'
+                isFirefox ? 'text-base' : 'text-[10px] font-bold text-gray-900'
               } ${
                 lang === code
                   ? 'bg-accent/15 ring-1 ring-accent scale-110'
@@ -76,7 +76,7 @@ export default function Navbar() {
                 onClick={() => setLang(code)}
                 title={code}
                 className={`leading-none w-7 h-7 rounded-full flex items-center justify-center transition-all duration-200 ${
-                  isFirefox ? 'text-base' : 'text-[10px] font-bold text-gray-700'
+                  isFirefox ? 'text-base' : 'text-[10px] font-bold text-gray-900'
                 } ${
                   lang === code
                     ? 'bg-accent/15 ring-1 ring-accent scale-110'
