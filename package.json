@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "bash scripts/deploy.sh",
+    "deploy": "npm run build && gh-pages -d dist",
     "translate": "node scripts/translate.mjs"
   },
   "dependencies": {

@@ -39,7 +39,6 @@ export default function Projekti() {
       {/* Header */}
       <section className="pt-32 pb-12">
         <div className="max-w-6xl mx-auto px-6">
-          <p className="font-mono text-xs text-white/50 tracking-widest uppercase mb-4">{t.projects.label}</p>
           <h1 className="font-display text-5xl md:text-6xl font-bold text-white leading-tight">
             {t.projects.title}
           </h1>
