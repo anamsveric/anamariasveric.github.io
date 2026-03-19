@@ -41,8 +41,7 @@ const translations = {
     },
     contact: {
       label: '— kontakt',
-      title: 'Imamo projekt?',
-      title_italic: 'Pišimo se.',
+      write: 'Pišite',
       phone_label: 'Telefon',
       social_label: 'Društvene mreže',
       cv_label: 'CV',
@@ -90,8 +89,7 @@ const translations = {
     },
     contact: {
       label: '— contact',
-      title: 'Got a project?',
-      title_italic: "Let's talk.",
+      write: 'Write',
       phone_label: 'Phone',
       social_label: 'Social media',
       cv_label: 'CV',
@@ -139,8 +137,7 @@ const translations = {
     },
     contact: {
       label: '— Kontakt',
-      title: 'Haben Sie ein Projekt?',
-      title_italic: 'Schreiben Sie mir.',
+      write: 'Schreiben',
       phone_label: 'Telefon',
       social_label: 'Soziale Medien',
       cv_label: 'Lebenslauf',
@@ -188,8 +185,7 @@ const translations = {
     },
     contact: {
       label: '— contatto',
-      title: 'Hai un progetto?',
-      title_italic: 'Scriviamoci.',
+      write: 'Scrivete',
       phone_label: 'Telefono',
       social_label: 'Social media',
       cv_label: 'CV',

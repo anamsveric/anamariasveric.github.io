@@ -11,7 +11,7 @@ export default function HobijiWeb() {
         <div className="absolute top-0 left-0 w-[500px] h-[400px] bg-gradient-to-br from-orange-400/35 via-rose-500/20 to-transparent rounded-full blur-[90px] pointer-events-none" />
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-violet-500/35 rounded-full blur-[110px] pointer-events-none" />
         <div className="relative z-10 max-w-6xl mx-auto px-6">
-          <p className="font-mono text-xs text-accent tracking-widest uppercase mb-4">{t.hobbies.label}</p>
+          <p className="font-mono text-xs text-white tracking-widest uppercase mb-4">{t.hobbies.label}</p>
           <h1 className="font-display text-5xl md:text-6xl font-bold text-white leading-tight">
             {t.hobbies.title} <span className="italic font-normal text-white/40">{t.hobbies.title_italic}</span>
           </h1>

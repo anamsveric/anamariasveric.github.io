@@ -37,7 +37,7 @@ export default function Projekti() {
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-violet-500/35 rounded-full blur-[110px] pointer-events-none" />
 
         <div className="relative z-10 max-w-6xl mx-auto px-6">
-          <p className="font-mono text-xs text-accent tracking-widest uppercase mb-4">{t.projects.label}</p>
+          <p className="font-mono text-xs text-white tracking-widest uppercase mb-4">{t.projects.label}</p>
           <h1 className="font-display text-5xl md:text-6xl font-bold text-white leading-tight">
             {t.projects.title}
           </h1>
@@ -48,7 +48,7 @@ export default function Projekti() {
       <section className="bg-surface border-b border-ink/10">
         <div className="max-w-5xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-16 items-center">
           <div>
-            <p className="font-mono text-xs text-accent tracking-widest uppercase mb-4">
+            <p className="font-mono text-xs text-white tracking-widest uppercase mb-4">
               {t.about.label}
             </p>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-ink mb-6 leading-tight">
@@ -63,7 +63,7 @@ export default function Projekti() {
               {['React', 'Node.js', 'JavaScript', 'Tailwind CSS', 'Git'].map((tech) => (
                 <span
                   key={tech}
-                  className="font-mono text-xs text-ink/60 border border-ink/20 px-3 py-1 hover:border-accent hover:text-accent transition-colors duration-200"
+                  className="font-mono text-xs text-ink/60 border border-ink/20 px-3 py-1 hover:border-accent hover:text-white transition-colors duration-200"
                 >
                   {tech}
                 </span>
@@ -85,12 +85,12 @@ export default function Projekti() {
                 rel="noopener noreferrer"
                 className="group block bg-surface border border-ink/10 p-6 hover:border-accent hover:-translate-y-1 transition-all duration-300"
               >
-                <span className="font-mono text-xs text-accent tracking-widest uppercase">{p.tag}</span>
-                <h2 className="font-display text-xl font-bold text-ink mt-3 mb-2 group-hover:text-accent transition-colors duration-300">
+                <span className="font-mono text-xs text-white tracking-widest uppercase">{p.tag}</span>
+                <h2 className="font-display text-xl font-bold text-ink mt-3 mb-2 group-hover:text-white transition-colors duration-300">
                   {p.naziv}
                 </h2>
                 <p className="font-body text-sm text-ink/60 leading-relaxed">{p.opis}</p>
-                <div className="mt-6 flex items-center gap-2 text-ink/40 group-hover:text-accent transition-colors duration-300">
+                <div className="mt-6 flex items-center gap-2 text-ink/40 group-hover:text-white transition-colors duration-300">
                   <span className="font-mono text-xs">{t.projects.open}</span>
                   <svg className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
@@ -106,7 +106,7 @@ export default function Projekti() {
       <section className="bg-surface border-t border-ink/10">
         <div className="max-w-5xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-16 items-center">
           <div>
-            <p className="font-mono text-xs text-accent tracking-widest uppercase mb-4">{t.projects.dogs_label}</p>
+            <p className="font-mono text-xs text-white tracking-widest uppercase mb-4">{t.projects.dogs_label}</p>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-ink leading-tight">
               {t.projects.dogs_title}
             </h2>
