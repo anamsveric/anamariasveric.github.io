@@ -47,10 +47,10 @@ export default function Projects() {
         </div>
       </section>
 
+
       {/* O meni — uvod */}
       <section className="border-t border-white/10 py-16">
         <div className="max-w-5xl mx-auto px-6">
-          <p className="font-mono text-xs text-white/50 tracking-widest uppercase mb-4">{t.about.label}</p>
           <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">
             {t.about.title}<br />
             <span className="italic font-normal text-white/60">{t.about.title_italic}</span>

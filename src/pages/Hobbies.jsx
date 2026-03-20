@@ -14,20 +14,18 @@ export default function Hobbies() {
       <div className="blob-drift-3 fixed bottom-[-80px] left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-violet-500/45 rounded-full blur-[90px] -z-10 pointer-events-none" />
       <div className="blob-drift-5 fixed top-1/2 left-[-200px] w-[900px] h-[200px] bg-rose-500/25 rounded-full blur-[70px] -z-10 pointer-events-none" style={{transform: 'rotate(-15deg)'}} />
 
-      {/* Header */}
-      <section className="pt-32 pb-12">
-        <div className="max-w-6xl mx-auto px-6">
-          <p className="font-mono text-xs text-white/50 tracking-widest uppercase mb-4">{t.hobbies.label}</p>
-          <h1 className="font-display text-5xl md:text-6xl font-bold text-white leading-tight">
-            {t.hobbies.title}
-          </h1>
+      {/* Provođenje slobodnog vremena sekcija */}
+      <section className="pt-32 pb-16">
+        <div className="max-w-5xl mx-auto px-6">
+          <h2 className="font-display text-5xl md:text-6xl font-bold text-white leading-tight mb-6">{t.hobbies.title}</h2>
+          <p className="font-body text-white/50 leading-relaxed">{t.hobbies.coming_soon}</p>
         </div>
       </section>
 
       {/* Psi sekcija */}
       <section className="border-t border-white/10 py-16">
         <div className="max-w-5xl mx-auto px-6">
-          <p className="font-mono text-xs text-white/50 tracking-widest uppercase mb-4">{t.hobbies.subtitle}</p>
+          <h2 className="font-display text-5xl md:text-6xl font-bold text-white leading-tight mb-6">{t.hobbies.subtitle}</h2>
           <p className="font-body text-white/50 leading-relaxed">{t.hobbies.coming_soon}</p>
         </div>
       </section>

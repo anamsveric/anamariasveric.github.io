@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import Projects from './pages/Projects'
@@ -17,7 +17,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/projekti" element={<Projects />} />
         <Route path="/kontakt" element={<Contact />} />
-        <Route path="/hobiji" element={<Hobbies />} />
+        <Route path="/hobiji" element={import.meta.env.DEV ? <Hobbies /> : <Navigate to="/" replace />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />
       </Routes>
     </LanguageProvider>

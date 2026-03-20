@@ -2,8 +2,6 @@ import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { useLang } from '../context/LanguageContext'
 
-const isFirefox = typeof navigator !== 'undefined' && navigator.userAgent.toLowerCase().includes('firefox')
-
 const LANGUAGES = [
   { code: 'HR', flag: '🇭🇷' },
   { code: 'EN', flag: '🇬🇧' },
@@ -19,7 +17,7 @@ export default function Navbar() {
   const navLinks = [
     { to: '/', label: t.nav.home },
     { to: '/projekti', label: t.nav.projects },
-    { to: '/hobiji', label: t.nav.hobbies },
+    ...(import.meta.env.DEV ? [{ to: '/hobiji', label: t.nav.hobbies }] : []),
     { to: '/kontakt', label: t.nav.contact },
   ]
 
@@ -48,45 +46,29 @@ export default function Navbar() {
         </div>
 
         {/* Desno — lang switcher */}
-        <div className="hidden md:flex items-center gap-1 shrink-0">
-          {LANGUAGES.map(({ code, flag }) => (
-            <button
-              key={code}
-              onClick={() => setLang(code)}
-              title={code}
-              className={`leading-none w-8 h-8 rounded-full flex items-center justify-center transition-all duration-200 ${
-                isFirefox ? 'text-base' : 'text-[10px] font-bold text-gray-900'
-              } ${
-                lang === code
-                  ? 'bg-accent/15 ring-1 ring-accent scale-110'
-                  : 'opacity-40 hover:opacity-70'
-              }`}
-            >
-              {isFirefox ? flag : code}
-            </button>
-          ))}
+        <div className="hidden md:flex items-center shrink-0">
+          <select
+            value={lang}
+            onChange={(e) => setLang(e.target.value)}
+            className="font-body text-sm font-bold text-gray-900 bg-transparent border border-gray-300 rounded-full px-3 py-1 cursor-pointer outline-none hover:border-blue-400 transition-colors duration-200"
+          >
+            {LANGUAGES.map(({ code, flag }) => (
+              <option key={code} value={code}>{flag} {code}</option>
+            ))}
+          </select>
         </div>
 
         {/* Mobitel — hamburger */}
         <div className="md:hidden flex items-center gap-3">
-          <div className="flex items-center gap-0.5">
+          <select
+            value={lang}
+            onChange={(e) => setLang(e.target.value)}
+            className="font-body text-xs font-bold text-gray-900 bg-transparent border border-gray-300 rounded-full px-2 py-1 cursor-pointer outline-none"
+          >
             {LANGUAGES.map(({ code, flag }) => (
-              <button
-                key={code}
-                onClick={() => setLang(code)}
-                title={code}
-                className={`leading-none w-7 h-7 rounded-full flex items-center justify-center transition-all duration-200 ${
-                  isFirefox ? 'text-base' : 'text-[10px] font-bold text-gray-900'
-                } ${
-                  lang === code
-                    ? 'bg-accent/15 ring-1 ring-accent scale-110'
-                    : 'opacity-40 hover:opacity-70'
-                }`}
-              >
-                {isFirefox ? flag : code}
-              </button>
+              <option key={code} value={code}>{flag} {code}</option>
             ))}
-          </div>
+          </select>
           <button
             className="flex flex-col gap-1.5 p-1"
             onClick={() => setMenuOpen(!menuOpen)}
