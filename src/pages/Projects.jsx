@@ -11,24 +11,10 @@ export default function Projects() {
       url: 'https://github.com',
       tag: 'Web App',
     },
-    {
-      id: 2,
-      naziv: 'Projekt Dva',
-      opis: 'Kratki opis drugog projekta. Zamijeni s pravim opisom.',
-      url: 'https://github.com',
-      tag: 'React',
-    },
-    {
-      id: 3,
-      naziv: 'Projekt Tri',
-      opis: 'Kratki opis trećeg projekta. Zamijeni s pravim opisom.',
-      url: 'https://github.com',
-      tag: 'Node.js',
-    },
   ]
 
   return (
-    <main className="min-h-screen relative overflow-hidden">
+    <main className="min-h-screen relative overflow-x-hidden">
 
       {/* Gradijent pozadina */}
       <div className="fixed inset-0 bg-gradient-to-br from-[#5C0FCC] via-[#2E0A85] to-[#080320] -z-10" />

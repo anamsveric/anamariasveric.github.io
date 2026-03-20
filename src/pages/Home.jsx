@@ -14,7 +14,7 @@ export default function Home() {
   }, [])
 
   return (
-    <main ref={heroRef} className="h-screen flex flex-col relative overflow-hidden">
+    <main ref={heroRef} className="min-h-screen flex flex-col relative overflow-x-hidden">
 
       {/* Gradijent pozadina */}
       <div className="fixed inset-0 bg-gradient-to-br from-[#5C0FCC] via-[#2E0A85] to-[#080320] -z-10" />

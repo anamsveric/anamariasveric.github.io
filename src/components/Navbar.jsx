@@ -9,6 +9,8 @@ const LANGUAGES = [
   { code: 'IT', flag: '🇮🇹' },
 ]
 
+const isFirefox = typeof navigator !== 'undefined' && navigator.userAgent.toLowerCase().includes('firefox')
+
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
   const location = useLocation()
@@ -36,7 +38,7 @@ export default function Navbar() {
             <Link
               key={to}
               to={to}
-              className={`font-body text-sm font-medium tracking-wide transition-colors duration-300 ${
+              className={`font-body text-sm tracking-wide transition-colors duration-300 ${
                 (to === '/' ? location.pathname === '/' : location.pathname.startsWith(to)) ? 'text-blue-600 font-bold' : 'text-black font-bold hover:text-blue-600'
               }`}
             >
@@ -50,10 +52,10 @@ export default function Navbar() {
           <select
             value={lang}
             onChange={(e) => setLang(e.target.value)}
-            className="font-body text-sm font-bold text-gray-900 bg-transparent border border-gray-300 rounded-full px-3 py-1 cursor-pointer outline-none hover:border-blue-400 transition-colors duration-200"
+            className="font-body text-sm text-gray-900 bg-transparent border border-gray-300 rounded-full px-3 py-1 cursor-pointer outline-none hover:border-blue-400 transition-colors duration-200"
           >
             {LANGUAGES.map(({ code, flag }) => (
-              <option key={code} value={code}>{flag} {code}</option>
+              <option key={code} value={code}>{isFirefox ? `${flag} ${code}` : code}</option>
             ))}
           </select>
         </div>
@@ -63,10 +65,10 @@ export default function Navbar() {
           <select
             value={lang}
             onChange={(e) => setLang(e.target.value)}
-            className="font-body text-xs font-bold text-gray-900 bg-transparent border border-gray-300 rounded-full px-2 py-1 cursor-pointer outline-none"
+            className="font-body text-xs text-gray-900 bg-transparent border border-gray-300 rounded-full px-2 py-1 cursor-pointer outline-none"
           >
             {LANGUAGES.map(({ code, flag }) => (
-              <option key={code} value={code}>{flag} {code}</option>
+              <option key={code} value={code}>{isFirefox ? `${flag} ${code}` : code}</option>
             ))}
           </select>
           <button
@@ -89,7 +91,7 @@ export default function Navbar() {
               key={to}
               to={to}
               onClick={() => setMenuOpen(false)}
-              className={`font-body text-base font-medium ${location.pathname === to ? 'text-blue-600' : 'text-black'}`}
+              className={`font-body text-base font-bold ${location.pathname === to ? 'text-blue-600' : 'text-black'}`}
             >
               {label}
             </Link>

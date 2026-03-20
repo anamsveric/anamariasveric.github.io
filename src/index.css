@@ -12,6 +12,12 @@
     color: #FFFFFF;
     font-family: Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  main, main p, main h1, main h2, main h3, main li, main span:not([class*="bg-"]) {
+    color: white;
   }
 
   ::selection {

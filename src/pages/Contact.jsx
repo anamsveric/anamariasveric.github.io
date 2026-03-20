@@ -31,9 +31,21 @@ export default function Contact() {
 
         <div className="relative z-10 max-w-5xl mx-auto px-6 pt-28 pb-16 w-full">
 
-          <h1 className="font-display text-5xl md:text-7xl font-bold text-white leading-tight mb-16">
-            {t.contact.write}
+          <h1 className="font-display text-3xl md:text-5xl font-bold text-white leading-tight mb-16">
+            "Što mogu napraviti za Vas?"
           </h1>
+
+          {/* Što mogu napraviti */}
+          <div className="mb-16">
+            <ul className="space-y-2 mb-8">
+              {['Web stranica (portfolio, tvrtka, obrt)', 'Landing page', 'WordPress site', 'Prilagodba i redesign postojeće stranice'].map((item) => (
+                <li key={item} className="font-body text-white/70 flex items-start gap-2">
+                  <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-white/50 shrink-0" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+            </div>
 
           {/* Email + Telefon u dva stupca */}
           <div className="grid md:grid-cols-2 gap-12">
@@ -97,10 +109,11 @@ export default function Contact() {
 
           {/* CV — ispod svega */}
           <div className="mt-12 pt-8 border-t border-white/10">
+          <p className="font-body font-bold text-white">Za više informacija o radnom iskustvu tu je i CV u PDF obliku!</p>
             <p className="font-mono text-xs text-white/40 tracking-widest uppercase mb-2">{t.contact.cv_label}</p>
             <div className="flex items-center gap-3">
               <a
-                href="/cv.pdf"
+                href="/cv.pdf#toolbar=0&navpanes=0&scrollbar=0"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 font-mono text-xs text-white/50 hover:text-white transition-colors duration-300 border border-white/20 hover:border-white/50 px-3 py-1.5 rounded"

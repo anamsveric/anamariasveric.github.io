@@ -4,7 +4,7 @@ export default function Hobbies() {
   const { t } = useLang()
 
   return (
-    <main className="min-h-screen relative overflow-hidden">
+    <main className="min-h-screen relative overflow-x-hidden">
 
       {/* Gradijent pozadina */}
       <div className="fixed inset-0 bg-gradient-to-br from-[#5C0FCC] via-[#2E0A85] to-[#080320] -z-10" />
