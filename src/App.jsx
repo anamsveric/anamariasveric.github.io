@@ -1,4 +1,11 @@
-import { Routes, Route, Navigate } from 'react-router-dom'
+import { Routes, Route, Navigate, useLocation } from 'react-router-dom'
+import { useEffect } from 'react'
+
+function ScrollReset() {
+  const { pathname } = useLocation()
+  useEffect(() => { window.scrollTo(0, 0) }, [pathname])
+  return null
+}
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import Projects from './pages/Projects'
@@ -6,13 +13,16 @@ import Contact from './pages/Contact'
 import Hobbies from './pages/Hobbies'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import CookieBanner from './components/CookieBanner'
+import ScrollToTop from './components/ScrollToTop'
 import { LanguageProvider } from './context/LanguageContext'
 
 export default function App() {
   return (
     <LanguageProvider>
+      <ScrollReset />
       <Navbar />
       <CookieBanner />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/projekti" element={<Projects />} />

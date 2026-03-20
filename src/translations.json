@@ -41,9 +41,14 @@
     "contact": {
       "label": "— kontakt",
       "write": "Pišite mi!",
+      "services_title": "Što mogu napraviti za Vas?",
+      "services": ["Web stranica (portfolio, tvrtka, obrt)", "Landing page", "WordPress site", "Prilagodba i redesign postojeće stranice"],
+      "email_label": "Email",
       "phone_label": "Telefon",
       "social_label": "Društvene mreže",
       "cv_label": "CV",
+      "cv_text": "Za više informacija o drugom radnom iskustvu tu je i CV u PDF obliku!",
+      "privacy": "Politika privatnosti",
       "footer_rights": "Sva prava pridržana.",
       "footer_made": "Napravljeno s React + Tailwind"
     }
@@ -90,9 +95,14 @@
     "contact": {
       "label": "— contact",
       "write": "Write to me!",
+      "services_title": "What can I do for You?",
+      "services": ["Website (portfolio, company, craft)", "Landing page", "WordPress site", "Customization and redesign of existing website"],
+      "email_label": "Email",
       "phone_label": "Phone",
       "social_label": "Social media",
       "cv_label": "CV",
+      "cv_text": "For more information about work experience, here is a CV in PDF format!",
+      "privacy": "Privacy Policy",
       "footer_rights": "All rights reserved.",
       "footer_made": "Built with React + Tailwind"
     }
@@ -139,9 +149,14 @@
     "contact": {
       "label": "— Kontakt",
       "write": "Schreib mir!",
+      "services_title": "Was kann ich für Sie tun?",
+      "services": ["Webseite (Portfolio, Unternehmen, Handwerk)", "Landing page", "WordPress-Site", "Anpassung und Redesign bestehender Webseite"],
+      "email_label": "E-Mail",
       "phone_label": "Telefon",
       "social_label": "Soziale Medien",
       "cv_label": "Lebenslauf",
+      "cv_text": "Für mehr Informationen zur Berufserfahrung gibt es hier einen Lebenslauf im PDF-Format!",
+      "privacy": "Datenschutz",
       "footer_rights": "Alle Rechte vorbehalten.",
       "footer_made": "Erstellt mit React + Tailwind"
     }
@@ -188,9 +203,14 @@
     "contact": {
       "label": "— contatto",
       "write": "Scrivimi!",
+      "services_title": "Cosa posso fare per Voi?",
+      "services": ["Sito web (portfolio, azienda, artigianato)", "Landing page", "Sito WordPress", "Personalizzazione e redesign del sito esistente"],
+      "email_label": "Email",
       "phone_label": "Telefono",
       "social_label": "Social media",
       "cv_label": "CV",
+      "cv_text": "Per maggiori informazioni sull'esperienza lavorativa, ecco un CV in formato PDF!",
+      "privacy": "Privacy",
       "footer_rights": "Tutti i diritti riservati.",
       "footer_made": "Realizzato con React + Tailwind"
     }
