@@ -99,8 +99,8 @@ export default function Contact() {
 
           {/* CV — ispod svega */}
           <div className="mt-12 pt-8 border-t border-white/10">
-          <p className="font-body font-bold text-white">Za više informacija o radnom iskustvu tu je i CV u PDF obliku!</p>
-            <p className="font-mono text-xs text-white/40 tracking-widest uppercase mb-2">{t.contact.cv_label}</p>
+          <p className="font-body font-bold text-white">Za više informacija o drugom radnom iskustvu tu je i CV u PDF obliku!</p>
+            
             <div className="flex items-center gap-3">
               <a
                 href="/cv.pdf#toolbar=0&navpanes=0&scrollbar=0"
