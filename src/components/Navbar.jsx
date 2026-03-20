@@ -1,26 +1,15 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { useLang } from '../context/LanguageContext'
-
-const LANGUAGES = [
-  { code: 'HR', flag: '🇭🇷' },
-  { code: 'EN', flag: '🇬🇧' },
-  { code: 'DE', flag: '🇩🇪' },
-  { code: 'IT', flag: '🇮🇹' },
-]
-
-const isFirefox = typeof navigator !== 'undefined' && navigator.userAgent.toLowerCase().includes('firefox')
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
   const location = useLocation()
-  const { lang, setLang, t } = useLang()
 
   const navLinks = [
-    { to: '/', label: t.nav.home },
-    { to: '/projekti', label: t.nav.projects },
-    ...(import.meta.env.DEV ? [{ to: '/hobiji', label: t.nav.hobbies }] : []),
-    { to: '/kontakt', label: t.nav.contact },
+    { to: '/', label: 'Početna' },
+    { to: '/projekti', label: 'Projekti' },
+    ...(import.meta.env.DEV ? [{ to: '/hobiji', label: 'Hobiji' }] : []),
+    { to: '/kontakt', label: 'Kontakt' },
   ]
 
   return (
@@ -29,7 +18,7 @@ export default function Navbar() {
 
         {/* Lijevo — Dobrodošli */}
         <Link to="/" className="font-body font-bold text-base text-black tracking-wide hover:text-blue-600 transition-colors duration-300 shrink-0">
-          {t.nav.welcome}
+          Dobrodošli
         </Link>
 
         {/* Sredina — nav linkovi (desktop) */}
@@ -47,30 +36,8 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Desno — lang switcher */}
-        <div className="hidden md:flex items-center shrink-0">
-          <select
-            value={lang}
-            onChange={(e) => setLang(e.target.value)}
-            className="font-body text-sm text-gray-900 bg-transparent border border-gray-300 rounded-full px-3 py-1 cursor-pointer outline-none hover:border-blue-400 transition-colors duration-200"
-          >
-            {LANGUAGES.map(({ code, flag }) => (
-              <option key={code} value={code}>{isFirefox ? `${flag} ${code}` : code}</option>
-            ))}
-          </select>
-        </div>
-
         {/* Mobitel — hamburger */}
-        <div className="md:hidden flex items-center gap-3">
-          <select
-            value={lang}
-            onChange={(e) => setLang(e.target.value)}
-            className="font-body text-xs text-gray-900 bg-transparent border border-gray-300 rounded-full px-2 py-1 cursor-pointer outline-none"
-          >
-            {LANGUAGES.map(({ code, flag }) => (
-              <option key={code} value={code}>{isFirefox ? `${flag} ${code}` : code}</option>
-            ))}
-          </select>
+        <div className="md:hidden flex items-center">
           <button
             className="flex flex-col gap-1.5 p-1"
             onClick={() => setMenuOpen(!menuOpen)}

@@ -1,11 +1,9 @@
 import { Link } from 'react-router-dom'
-import { useLang } from '../context/LanguageContext'
 
 // Ažuriraj ovaj datum kad zamijeniš CV fajl
 const CV_UPDATED = '18.03.2026'
 
 export default function Contact() {
-  const { t } = useLang()
   const cvDate = CV_UPDATED
 
   return (
@@ -22,13 +20,13 @@ export default function Contact() {
         <div className="relative z-10 max-w-5xl mx-auto px-6 pt-28 pb-16 w-full">
 
           <h1 className="font-display text-3xl md:text-5xl font-bold text-white leading-tight mb-16">
-            {t.contact.services_title}
+            Što mogu napraviti za Vas?
           </h1>
 
           {/* Usluge */}
           <div className="mb-16">
             <ul className="space-y-2 mb-8">
-              {t.contact.services.map((item) => (
+              {['Web stranica (portfolio, tvrtka, obrt)', 'Landing page', 'WordPress site', 'Prilagodba i redesign postojeće stranice'].map((item) => (
                 <li key={item} className="font-body text-white/70 flex items-start gap-2">
                   <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-white/50 shrink-0" />
                   {item}
@@ -42,7 +40,7 @@ export default function Contact() {
 
             {/* Email */}
             <div>
-              <p className="font-mono text-xs text-white/40 tracking-widest uppercase mb-2">{t.contact.email_label}</p>
+              <p className="font-mono text-xs text-white/40 tracking-widest uppercase mb-2">Email</p>
               <a
                 href="mailto:anamaria.sveric@gmail.com"
                 className="font-body text-xl text-white hover:text-white/70 transition-colors duration-300 underline underline-offset-4 decoration-white/20"
@@ -54,7 +52,7 @@ export default function Contact() {
             {/* Telefon + društvene mreže */}
             <div className="space-y-6">
               <div>
-                <p className="font-mono text-xs text-white/40 tracking-widest uppercase mb-2">{t.contact.phone_label}</p>
+                <p className="font-mono text-xs text-white/40 tracking-widest uppercase mb-2">Telefon</p>
                 <div className="flex items-center gap-3 flex-wrap">
                   <a href="tel:+385917938803" className="font-body text-xl text-white hover:text-white/70 transition-colors duration-300">
                     +385 91 793 8803
@@ -75,7 +73,7 @@ export default function Contact() {
 
               {/* Društvene mreže */}
               <div>
-                <p className="font-mono text-xs text-white/40 tracking-widest uppercase mb-3">{t.contact.social_label}</p>
+                <p className="font-mono text-xs text-white/40 tracking-widest uppercase mb-3">Društvene mreže</p>
                 <div className="flex items-center gap-4">
                   <a href="https://www.facebook.com/anamaria.1058" target="_blank" rel="noopener noreferrer" className="opacity-70 hover:opacity-100 transition-opacity duration-300" style={{color:'#1877F2'}} aria-label="Facebook">
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -99,8 +97,8 @@ export default function Contact() {
 
           {/* CV — ispod svega */}
           <div className="mt-12 pt-8 border-t border-white/10 flex flex-col items-center text-center">
-          <p className="font-body font-bold text-white">{t.contact.cv_text}</p>
-            
+            <p className="font-body font-bold text-white">Za više informacija o drugom radnom iskustvu tu je i CV u PDF obliku!</p>
+
             <div className="flex items-center gap-3 mt-3">
               <a
                 href="/cv.pdf#toolbar=0&navpanes=0&scrollbar=0"
@@ -114,7 +112,7 @@ export default function Contact() {
                 CV.pdf
               </a>
               {cvDate && (
-                <span className="font-mono text-xs text-white/25">{t.hero.cv_updated} {cvDate}</span>
+                <span className="font-mono text-xs text-white/25">ažurirano {cvDate}</span>
               )}
             </div>
           </div>
@@ -124,11 +122,11 @@ export default function Contact() {
         <div className="relative z-10 border-t border-white/10">
           <div className="max-w-5xl mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="font-mono text-xs text-white/30">
-              © {new Date().getFullYear()} Anamaria Sverić. {t.contact.footer_rights}
+              © {new Date().getFullYear()} Anamaria Sverić. Sva prava pridržana.
             </p>
-            <p className="font-mono text-xs text-white/30">{t.contact.footer_made}</p>
+            <p className="font-mono text-xs text-white/30">Napravljeno s React + Tailwind</p>
             <Link to="/privacy" className="font-mono text-xs text-white/30 hover:text-white/60 transition-colors">
-              {t.contact.privacy}
+              Politika privatnosti
             </Link>
           </div>
         </div>

@@ -14,11 +14,10 @@ import Hobbies from './pages/Hobbies'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import CookieBanner from './components/CookieBanner'
 import ScrollToTop from './components/ScrollToTop'
-import { LanguageProvider } from './context/LanguageContext'
 
 export default function App() {
   return (
-    <LanguageProvider>
+    <>
       <ScrollReset />
       <Navbar />
       <CookieBanner />
@@ -30,6 +29,6 @@ export default function App() {
         <Route path="/hobiji" element={import.meta.env.DEV ? <Hobbies /> : <Navigate to="/" replace />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />
       </Routes>
-    </LanguageProvider>
+    </>
   )
 }

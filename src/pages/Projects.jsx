@@ -1,8 +1,4 @@
-import { useLang } from '../context/LanguageContext'
-
 export default function Projects() {
-  const { t } = useLang()
-
   const projects = [
     {
       id: 1,
@@ -28,22 +24,20 @@ export default function Projects() {
       <section className="pt-32 pb-12">
         <div className="max-w-6xl mx-auto px-6">
           <h1 className="font-display text-5xl md:text-6xl font-bold text-white leading-tight">
-            {t.projects.title}
+            Projekti
           </h1>
         </div>
       </section>
-
 
       {/* O meni — uvod */}
       <section className="border-t border-white/10 py-16">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">
-            {t.about.title}<br />
-            <span className="italic font-normal text-white/60">{t.about.title_italic}</span>
+            Početak ...
           </h2>
           <div className="space-y-4 max-w-3xl">
-            <p className="font-body text-white/60 leading-relaxed">{t.about.p1}</p>
-            <p className="font-body text-white/60 leading-relaxed">{t.about.p2}</p>
+            <p className="font-body text-white/60 leading-relaxed">Ova stranica koju gledate je također dio projekta samostalne izrade te će sadržavat sve radove koje napravim na jednom mjestu. Također, svaki zasebni projekt će bit povezan ovdje.</p>
+            <p className="font-body text-white/60 leading-relaxed">Fokusirana sam na moderan web razvoj, ali uvijek gledam širu sliku — korisničko iskustvo, performanse i kod koji je lako čitati i nadograđivati.</p>
             <div className="flex flex-wrap gap-2 pt-2">
               {['React', 'Node.js', 'JavaScript', 'Tailwind CSS', 'Git'].map((tech) => (
                 <span
@@ -76,7 +70,7 @@ export default function Projects() {
                 </h2>
                 <p className="font-body text-sm text-white/50 leading-relaxed">{p.opis}</p>
                 <div className="mt-6 flex items-center gap-2 text-white/30 group-hover:text-white/70 transition-colors duration-300">
-                  <span className="font-mono text-xs">{t.projects.open}</span>
+                  <span className="font-mono text-xs">Otvori projekt</span>
                   <svg className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg>
@@ -91,9 +85,9 @@ export default function Projects() {
       <div className="border-t border-white/10">
         <div className="max-w-5xl mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="font-mono text-xs text-white/30">
-            © {new Date().getFullYear()} Anamaria Sverić. {t.contact.footer_rights}
+            © {new Date().getFullYear()} Anamaria Sverić. Sva prava pridržana.
           </p>
-          <p className="font-mono text-xs text-white/30">{t.contact.footer_made}</p>
+          <p className="font-mono text-xs text-white/30">Napravljeno s React + Tailwind</p>
         </div>
       </div>
 

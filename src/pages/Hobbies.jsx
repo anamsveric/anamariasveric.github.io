@@ -1,8 +1,4 @@
-import { useLang } from '../context/LanguageContext'
-
 export default function Hobbies() {
-  const { t } = useLang()
-
   return (
     <main className="min-h-screen relative overflow-x-hidden">
 
@@ -14,19 +10,19 @@ export default function Hobbies() {
       <div className="blob-drift-3 fixed bottom-[-80px] left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-violet-500/45 rounded-full blur-[90px] -z-10 pointer-events-none" />
       <div className="blob-drift-5 fixed top-1/2 left-[-200px] w-[900px] h-[200px] bg-rose-500/25 rounded-full blur-[70px] -z-10 pointer-events-none" style={{transform: 'rotate(-15deg)'}} />
 
-      {/* Provođenje slobodnog vremena sekcija */}
+      {/* Provođenje slobodnog vremena */}
       <section className="pt-32 pb-16">
         <div className="max-w-5xl mx-auto px-6">
-          <h2 className="font-display text-5xl md:text-6xl font-bold text-white leading-tight mb-6">{t.hobbies.title}</h2>
-          <p className="font-body text-white/50 leading-relaxed">{t.hobbies.coming_soon}</p>
+          <h2 className="font-display text-5xl md:text-6xl font-bold text-white leading-tight mb-6">Provođenje slobodnog vremena</h2>
+          <p className="font-body text-white/50 leading-relaxed">Stranica u izradi — uskoro dostupno.</p>
         </div>
       </section>
 
       {/* Psi sekcija */}
       <section className="border-t border-white/10 py-16">
         <div className="max-w-5xl mx-auto px-6">
-          <h2 className="font-display text-5xl md:text-6xl font-bold text-white leading-tight mb-6">{t.hobbies.subtitle}</h2>
-          <p className="font-body text-white/50 leading-relaxed">{t.hobbies.coming_soon}</p>
+          <h2 className="font-display text-5xl md:text-6xl font-bold text-white leading-tight mb-6">Psi</h2>
+          <p className="font-body text-white/50 leading-relaxed">Stranica u izradi — uskoro dostupno.</p>
         </div>
       </section>
 
@@ -34,9 +30,9 @@ export default function Hobbies() {
       <div className="border-t border-white/10">
         <div className="max-w-5xl mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="font-mono text-xs text-white/30">
-            © {new Date().getFullYear()} Anamaria Sverić. {t.contact.footer_rights}
+            © {new Date().getFullYear()} Anamaria Sverić. Sva prava pridržana.
           </p>
-          <p className="font-mono text-xs text-white/30">{t.contact.footer_made}</p>
+          <p className="font-mono text-xs text-white/30">Napravljeno s React + Tailwind</p>
         </div>
       </div>
 
