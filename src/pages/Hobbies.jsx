@@ -1,16 +1,18 @@
 import { useLang } from '../context/LanguageContext'
 
-export default function HobijiWeb() {
+export default function Hobbies() {
   const { t } = useLang()
 
   return (
     <main className="min-h-screen relative overflow-hidden">
 
       {/* Gradijent pozadina */}
-      <div className="fixed inset-0 bg-gradient-to-br from-[#3D1278] via-[#1E0A4E] to-[#0E0630] -z-10" />
-      <div className="fixed top-0 left-0 w-[700px] h-[550px] bg-gradient-to-br from-orange-400/40 via-rose-500/25 to-transparent rounded-full blur-[90px] -z-10 pointer-events-none" />
-      <div className="fixed top-0 right-0 w-[650px] h-[650px] bg-violet-500/40 rounded-full blur-[110px] -z-10 pointer-events-none" />
-      <div className="fixed bottom-0 right-1/4 w-[400px] h-[300px] bg-purple-600/30 rounded-full blur-[80px] -z-10 pointer-events-none" />
+      <div className="fixed inset-0 bg-gradient-to-br from-[#5C0FCC] via-[#2E0A85] to-[#080320] -z-10" />
+      <div className="blob-drift-1 fixed top-[-60px] left-[-120px] w-[750px] h-[550px] bg-fuchsia-500/40 rounded-full blur-[95px] -z-10 pointer-events-none" />
+      <div className="blob-drift-4 fixed top-[80px] left-[180px] w-[550px] h-[380px] bg-orange-400/50 rounded-full blur-[75px] -z-10 pointer-events-none" style={{borderRadius: '60% 40% 70% 30% / 50% 60% 40% 50%'}} />
+      <div className="blob-drift-2 fixed top-[-80px] right-[-60px] w-[700px] h-[600px] bg-indigo-500/60 rounded-full blur-[100px] -z-10 pointer-events-none" />
+      <div className="blob-drift-3 fixed bottom-[-80px] left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-violet-500/45 rounded-full blur-[90px] -z-10 pointer-events-none" />
+      <div className="blob-drift-5 fixed top-1/2 left-[-200px] w-[900px] h-[200px] bg-rose-500/25 rounded-full blur-[70px] -z-10 pointer-events-none" style={{transform: 'rotate(-15deg)'}} />
 
       {/* Header */}
       <section className="pt-32 pb-12">

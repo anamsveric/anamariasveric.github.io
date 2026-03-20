@@ -16,11 +16,18 @@ export default function Home() {
   return (
     <main ref={heroRef} className="h-screen flex flex-col relative overflow-hidden">
 
-      {/* Gradijent pozadina — isti kao na ostalim stranicama */}
-      <div className="fixed inset-0 bg-gradient-to-br from-[#3D1278] via-[#1E0A4E] to-[#0E0630] -z-10" />
-      <div className="fixed top-0 left-0 w-[700px] h-[550px] bg-gradient-to-br from-orange-400/40 via-rose-500/25 to-transparent rounded-full blur-[90px] -z-10 pointer-events-none" />
-      <div className="fixed top-0 right-0 w-[650px] h-[650px] bg-violet-500/40 rounded-full blur-[110px] -z-10 pointer-events-none" />
-      <div className="fixed bottom-0 right-1/4 w-[400px] h-[300px] bg-purple-600/30 rounded-full blur-[80px] -z-10 pointer-events-none" />
+      {/* Gradijent pozadina */}
+      <div className="fixed inset-0 bg-gradient-to-br from-[#5C0FCC] via-[#2E0A85] to-[#080320] -z-10" />
+      {/* Val 1 — fuchsia/pink lijevo */}
+      <div className="blob-drift-1 fixed top-[-60px] left-[-120px] w-[750px] h-[550px] bg-fuchsia-500/40 rounded-full blur-[95px] -z-10 pointer-events-none" />
+      {/* Val 2 — orange/warm centar */}
+      <div className="blob-drift-4 fixed top-[80px] left-[180px] w-[550px] h-[380px] bg-orange-400/50 rounded-full blur-[75px] -z-10 pointer-events-none" style={{borderRadius: '60% 40% 70% 30% / 50% 60% 40% 50%'}} />
+      {/* Val 3 — indigo/plavi desno gore */}
+      <div className="blob-drift-2 fixed top-[-80px] right-[-60px] w-[700px] h-[600px] bg-indigo-500/60 rounded-full blur-[100px] -z-10 pointer-events-none" />
+      {/* Val 4 — violet dno sredina */}
+      <div className="blob-drift-3 fixed bottom-[-80px] left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-violet-500/45 rounded-full blur-[90px] -z-10 pointer-events-none" />
+      {/* Val 5 — rose tanki val dijagonalno */}
+      <div className="blob-drift-5 fixed top-1/2 left-[-200px] w-[900px] h-[200px] bg-rose-500/25 rounded-full blur-[70px] -z-10 pointer-events-none" style={{transform: 'rotate(-15deg)'}} />
 
       {/* Hero section */}
       <section className="relative flex-1 flex items-center">
@@ -30,7 +37,7 @@ export default function Home() {
           {/* Slika — na mobilnom gore, na desktopu desno */}
           <div data-animate className="opacity-0 flex justify-center md:hidden">
             <img
-              src="/foto.jpg.jpg"
+              src="/foto.jpg"
               alt="Anamaria Sverić"
               className="h-48 w-auto rounded-[30px_0_30px_0] object-cover shadow-2xl"
             />
@@ -72,7 +79,7 @@ export default function Home() {
           <div data-animate className="opacity-0 hidden md:flex justify-end">
             <div className="relative inline-block">
               <img
-                src="/foto.jpg.jpg"
+                src="/foto.jpg"
                 alt="Anamaria Sverić"
                 className="max-h-[55vh] w-auto rounded-[40px_0_40px_0] object-cover shadow-2xl"
               />
