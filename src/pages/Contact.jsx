@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 
 // Ažuriraj ovaj datum kad zamijeniš CV fajl
-const CV_UPDATED = '18.03.2026'
+const CV_UPDATED = '21.03.2026'
 
 export default function Contact() {
   const cvDate = CV_UPDATED
@@ -102,7 +102,7 @@ export default function Contact() {
             <div className="rounded-xl overflow-hidden border border-white/10" style={{height: '280px'}}>
               <iframe
                 title="Lokacija"
-                src="https://www.openstreetmap.org/export/embed.html?bbox=13.8468%2C44.8704%2C13.8528%2C44.8734&layer=mapnik&marker=44.8719%2C13.8498"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=13.8396%2C44.8660%2C13.8476%2C44.8700&layer=mapnik&marker=44.8680%2C13.8436"
                 width="100%"
                 height="100%"
                 style={{border: 0}}
