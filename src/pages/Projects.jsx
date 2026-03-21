@@ -2,8 +2,8 @@ export default function Projects() {
   const projects = [
     {
       id: 1,
-      naziv: 'Projekt Jedan',
-      opis: 'Kratki opis prvog projekta. Zamijeni s pravim opisom.',
+      naziv: 'Moji kućni ljubimci',
+      opis: 'U izradi.',
       url: '/projekti',
       tag: 'Web stranica',
     },

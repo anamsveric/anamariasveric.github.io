@@ -26,7 +26,7 @@ export default function Contact() {
           {/* Usluge */}
           <div className="mb-16">
             <ul className="space-y-2 mb-8">
-              {['Web stranica (portfolio, tvrtka, obrt)', 'Landing page', 'WordPress site', 'Prilagodba i redesign postojeće stranice'].map((item) => (
+              {['Web stranica (portfolio, tvrtka, obrt)', 'Landing page', 'Prilagodba i redesign postojeće stranice'].map((item) => (
                 <li key={item} className="font-body text-white/70 flex items-start gap-2">
                   <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-white/50 shrink-0" />
                   {item}
@@ -55,7 +55,7 @@ export default function Contact() {
                 <p className="font-mono text-xs text-white/40 tracking-widest uppercase mb-2">Telefon</p>
                 <div className="flex items-center gap-3 flex-wrap">
                   <a href="tel:+385917938803" className="font-body text-xl text-white hover:text-white/70 transition-colors duration-300">
-                    +385 91 793 8803 (poslovni)
+                    trenutno nedostupno, javiti se na mail
                   </a>
                   <a href="https://wa.me/385917938803" target="_blank" rel="noopener noreferrer" className="opacity-70 hover:opacity-100 transition-opacity duration-300" style={{color:'#25D366'}} aria-label="WhatsApp">
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
