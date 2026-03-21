@@ -102,7 +102,7 @@ export default function Contact() {
             <div className="rounded-xl overflow-hidden border border-white/10" style={{height: '280px'}}>
               <iframe
                 title="Lokacija"
-                src="https://www.openstreetmap.org/export/embed.html?bbox=13.8460%2C44.8710%2C13.8530%2C44.8750&layer=mapnik&marker=44.8730%2C13.8490"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=13.8468%2C44.8704%2C13.8528%2C44.8734&layer=mapnik&marker=44.8719%2C13.8498"
                 width="100%"
                 height="100%"
                 style={{border: 0}}
