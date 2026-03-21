@@ -7,6 +7,14 @@ export default function Projects() {
       url: '/projekti',
       tag: 'Web stranica',
     },
+
+    {
+      id: 2,
+      naziv: 'Restoran Veritas',
+      opis: 'U izradi.',
+      url: '/projekti',
+      tag: 'Web stranica',
+    },
   ]
 
   return (
