@@ -39,7 +39,7 @@ export default function Projects() {
             <p className="font-body text-white/60 leading-relaxed">Ova stranica koju gledate je također dio projekta samostalne izrade te će sadržavat sve radove koje napravim na jednom mjestu. Također, svaki zasebni projekt će bit povezan ovdje.</p>
             <p className="font-body text-white/60 leading-relaxed">Fokusirana sam na moderan web razvoj, ali uvijek gledam širu sliku — korisničko iskustvo, performanse i kod koji je lako čitati i nadograđivati.</p>
             <div className="flex flex-wrap gap-2 pt-2">
-              {['React', 'Node.js', 'JavaScript', 'Tailwind CSS', 'Git'].map((tech) => (
+              {['React', 'Node.js', 'JavaScript', 'Tailwind CSS', 'Git', 'Claude Code'].map((tech) => (
                 <span
                   key={tech}
                   className="font-mono text-xs text-white/50 border border-white/20 px-3 py-1 hover:border-white/50 hover:text-white transition-colors duration-200"
