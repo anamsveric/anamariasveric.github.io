@@ -152,7 +152,7 @@ export default function Contact() {
               {/* CV */}
               <div className="bg-white rounded-2xl p-6 border border-black/5 shadow-sm">
                 <p className="font-body text-base font-semibold text-ink mb-1">CV u PDF obliku</p>
-                <p className="font-body text-sm text-muted mb-4">Za više informacija o radnom iskustvu.</p>
+                <p className="font-body text-sm text-muted mb-4">Za više informacija o drugom radnom iskustvu.</p>
                 <div className="flex items-center gap-3">
                   <a
                     href="/cv.pdf#toolbar=0&navpanes=0&scrollbar=0"
