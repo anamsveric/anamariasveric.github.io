@@ -8,20 +8,16 @@
   }
 
   body {
-    background-color: #160840;
-    color: #FFFFFF;
-    font-family: Arial, sans-serif;
+    background-color: #F7F3EE;
+    color: #0F172A;
+    font-family: 'Inter', system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
     overflow-y: auto;
   }
 
-  main, main p, main h1, main h2, main h3, main li, main span:not([class*="bg-"]) {
-    color: white;
-  }
-
   ::selection {
-    background-color: #3B5BDB;
+    background-color: #2563EB;
     color: #FFFFFF;
   }
 }
@@ -32,42 +28,4 @@
   .delay-300 { animation-delay: 300ms; }
   .delay-400 { animation-delay: 400ms; }
   .delay-500 { animation-delay: 500ms; }
-
-  .opacity-0-start { opacity: 0; }
-}
-
-/* Wave blob animacije */
-@keyframes wave-drift {
-  0%   { transform: translate(0px, 0px) scale(1); }
-  33%  { transform: translate(40px, -30px) scale(1.08); }
-  66%  { transform: translate(-25px, 20px) scale(0.95); }
-  100% { transform: translate(0px, 0px) scale(1); }
-}
-
-@keyframes wave-drift-slow {
-  0%   { transform: translate(0px, 0px) scale(1) rotate(0deg); }
-  50%  { transform: translate(-50px, 30px) scale(1.1) rotate(8deg); }
-  100% { transform: translate(0px, 0px) scale(1) rotate(0deg); }
-}
-
-@keyframes wave-pulse {
-  0%, 100% { opacity: 0.55; transform: scaleX(1) scaleY(1); }
-  50%       { opacity: 0.75; transform: scaleX(1.15) scaleY(0.9); }
-}
-
-.blob-drift-1 { animation: wave-drift 12s ease-in-out infinite; }
-.blob-drift-2 { animation: wave-drift-slow 18s ease-in-out infinite; }
-.blob-drift-3 { animation: wave-drift 15s ease-in-out infinite reverse; }
-.blob-drift-4 { animation: wave-pulse 10s ease-in-out infinite; }
-.blob-drift-5 { animation: wave-drift-slow 22s ease-in-out infinite reverse; }
-
-/* Subtle grain texture overlay */
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
-  pointer-events: none;
-  z-index: 9999;
-  opacity: 0.4;
 }
