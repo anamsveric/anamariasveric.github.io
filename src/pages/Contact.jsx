@@ -180,17 +180,7 @@ export default function Contact() {
           <p className="font-body text-sm text-muted">
             © {new Date().getFullYear()} Anamaria Sverić. Sva prava pridržana.
           </p>
-          <div className="flex items-center gap-5">
-            {socials.map(({ label, href, icon }) => (
-              <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label}
-                className="text-muted hover:text-ink transition-colors duration-300">
-                {icon}
-              </a>
-            ))}
-            <a href="mailto:anamaria.sveric@gmail.com" aria-label="Email" className="text-muted hover:text-ink transition-colors duration-300">
-              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
-            </a>
-          </div>
+          <p className="font-body text-sm text-muted">Napravljeno s React + Tailwind</p>
           <Link to="/privacy" className="font-body text-sm text-muted hover:text-ink transition-colors duration-300">
             Politika privatnosti
           </Link>

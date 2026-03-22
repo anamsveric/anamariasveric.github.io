@@ -81,9 +81,7 @@ export default function Projects() {
           <p className="font-body text-sm text-muted">
             © {new Date().getFullYear()} Anamaria Sverić. Sva prava pridržana.
           </p>
-          <div className="flex items-center gap-5">
-            <SocialIcons />
-          </div>
+          <p className="font-body text-sm text-muted">Napravljeno s React + Tailwind</p>
           <Link to="/privacy" className="font-body text-sm text-muted hover:text-ink transition-colors duration-300">
             Politika privatnosti
           </Link>
