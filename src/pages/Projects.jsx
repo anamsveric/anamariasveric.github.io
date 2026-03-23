@@ -14,10 +14,10 @@ export default function Projects() {
       id: 1,
       naziv: t.projects.p1_name,
       opis: t.projects.p1_desc,
-      url: null,
+      url: 'https://anamsveric.github.io/kucni-ljubimci/',
       tags: ['React', 'Tailwind CSS'],
-      img: null,
-      inProgress: true,
+      img: 'https://anamsveric.github.io/kucni-ljubimci/oba1.jpg',
+      inProgress: false,
     },
     {
       id: 2,
