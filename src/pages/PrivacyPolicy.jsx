@@ -74,10 +74,10 @@ export default function PrivacyPolicy() {
             <h2 className="font-display text-xl font-bold text-ink mb-3">{p.contact_title}</h2>
             <p className="font-body text-base text-muted leading-relaxed">
               {p.contact_text}{' '}
-              <a href="mailto:anamaria.sveric@gmail.com"
+              <Link to="/kontakt"
                 className="text-accent underline underline-offset-4 hover:text-blue-700 transition-colors">
-                anamaria.sveric@gmail.com
-              </a>.
+                {p.contact_link}
+              </Link>.
             </p>
           </div>
 

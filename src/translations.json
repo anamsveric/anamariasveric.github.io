@@ -64,7 +64,8 @@
         "prigovor na obradu podataka"
       ],
       "contact_title": "Kontakt",
-      "contact_text": "Za sva pitanja vezana uz privatnost možete nam se obratiti na"
+      "contact_text": "Za sva pitanja vezana uz privatnost možete nam se obratiti putem",
+      "contact_link": "kontakt stranice"
     },
     "projects": {
       "label": "Projekti",
@@ -163,7 +164,8 @@
         "object to data processing"
       ],
       "contact_title": "Contact",
-      "contact_text": "For any privacy-related questions you can reach us at"
+      "contact_text": "For any privacy-related questions you can reach us via the",
+      "contact_link": "contact page"
     },
     "projects": {
       "label": "Projects",
@@ -262,7 +264,8 @@
         "Widerspruch gegen die Datenverarbeitung"
       ],
       "contact_title": "Kontakt",
-      "contact_text": "Für datenschutzbezogene Fragen können Sie uns erreichen unter"
+      "contact_text": "Für datenschutzbezogene Fragen können Sie uns über die",
+      "contact_link": "Kontaktseite"
     },
     "projects": {
       "label": "Projekte",
@@ -361,7 +364,8 @@
         "opposizione al trattamento dei dati"
       ],
       "contact_title": "Contatto",
-      "contact_text": "Per qualsiasi domanda relativa alla privacy puoi contattarci a"
+      "contact_text": "Per qualsiasi domanda relativa alla privacy puoi contattarci tramite la",
+      "contact_link": "pagina contatti"
     },
     "projects": {
       "label": "Progetti",
