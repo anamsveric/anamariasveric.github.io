@@ -13,7 +13,6 @@ import Contact from './pages/Contact'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import CookieBanner from './components/CookieBanner'
 import ScrollToTop from './components/ScrollToTop'
-
 export default function App() {
   return (
     <>
