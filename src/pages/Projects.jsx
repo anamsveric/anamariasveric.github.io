@@ -4,12 +4,13 @@ import { useLang } from '../context/LanguageContext'
 const placeholders = [
   'from-violet-400 to-indigo-600',
   'from-orange-300 to-rose-500',
+  'from-emerald-400 to-teal-600',
 ]
 
 export default function Projects() {
   const { t } = useLang()
 
-  const projects = [
+  const websites = [
     {
       id: 1,
       naziv: t.projects.p1_name,
@@ -30,6 +31,19 @@ export default function Projects() {
     },
   ]
 
+  const webapps = [
+    {
+      id: 3,
+      naziv: t.projects.p3_name,
+      opis: t.projects.p3_desc,
+      url: 'https://anamsveric.github.io/budget/',
+      tags: ['React', 'JavaScript'],
+      img: null,
+      icon: '💶',
+      inProgress: true,
+    },
+  ]
+
   return (
     <main className="bg-[#F7F3EE] min-h-screen">
 
@@ -38,16 +52,29 @@ export default function Projects() {
         <div className="max-w-6xl mx-auto px-6">
           <p className="font-body text-xs font-semibold tracking-widest text-accent uppercase mb-3">{t.projects.label}</p>
           <h1 className="font-display text-5xl md:text-6xl font-bold text-ink leading-tight mb-6">{t.projects.title}</h1>
-          <p className="font-body text-base text-muted max-w-xl leading-relaxed">{t.projects.subtitle}</p>
+          <p className="font-body text-base text-muted leading-relaxed text-justify">{t.projects.subtitle}</p>
         </div>
       </section>
 
-      {/* ── PROJEKTI GRID ── */}
+      {/* ── WEB STRANICE ── */}
       <section className="border-t border-black/5 py-16">
         <div className="max-w-6xl mx-auto px-6">
+          <h2 className="font-display text-2xl font-bold text-ink mb-8">{t.projects.cat_website}</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((p, i) => (
+            {websites.map((p, i) => (
               <ProjectCard key={p.id} project={p} gradient={placeholders[i]} inProgressLabel={t.projects.in_progress} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── WEB APLIKACIJE ── */}
+      <section className="border-t border-black/5 py-16">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="font-display text-2xl font-bold text-ink mb-8">{t.projects.cat_webapp}</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {webapps.map((p) => (
+              <ProjectCard key={p.id} project={p} gradient={placeholders[2]} inProgressLabel={t.projects.in_progress} />
             ))}
           </div>
         </div>
@@ -57,7 +84,7 @@ export default function Projects() {
       <section className="border-t border-black/5 py-16">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="font-display text-3xl font-bold text-ink mb-4">{t.projects.tech_title}</h2>
-          <p className="font-body text-base text-muted max-w-2xl leading-relaxed mb-8">{t.projects.tech_desc}</p>
+          <p className="font-body text-base text-muted leading-relaxed mb-8 text-justify">{t.projects.tech_desc}</p>
           <div className="flex flex-wrap gap-2">
             {['React', 'JavaScript', 'Tailwind CSS', 'Git', 'Claude Code'].map((tech) => (
               <span key={tech} className="font-body text-xs text-ink/60 border border-ink/15 px-3 py-1.5 rounded-full">
@@ -91,7 +118,9 @@ function ProjectCard({ project, gradient, inProgressLabel }) {
           <img src={project.img} alt={project.naziv} className="w-full h-52 object-cover" />
         ) : (
           <div className={`w-full h-52 bg-gradient-to-br ${gradient} flex items-center justify-center`}>
-            {project.inProgress && (
+            {project.icon ? (
+              <span className="text-6xl drop-shadow-md">{project.icon}</span>
+            ) : project.inProgress && (
               <span className="font-body text-sm text-white/80 bg-white/20 backdrop-blur-sm px-4 py-1.5 rounded-full">
                 {inProgressLabel}
               </span>
@@ -104,7 +133,7 @@ function ProjectCard({ project, gradient, inProgressLabel }) {
         <h2 className="font-display text-xl font-bold text-ink mb-2 group-hover:text-accent transition-colors duration-300">
           {project.naziv}
         </h2>
-        <p className="font-body text-sm text-muted leading-relaxed mb-4">{project.opis}</p>
+        <p className="font-body text-sm text-muted leading-relaxed mb-4 text-justify">{project.opis}</p>
         <div className="flex flex-wrap gap-2">
           {project.tags.map((tag) => (
             <span key={tag} className="font-body text-xs text-ink/60 bg-ink/5 px-3 py-1 rounded-full">{tag}</span>

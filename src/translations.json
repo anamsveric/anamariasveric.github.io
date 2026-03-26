@@ -74,10 +74,14 @@
       "in_progress": "U izradi",
       "tech_title": "Tehnologije",
       "tech_desc": "Fokusirana sam na moderan web razvoj — korisničko iskustvo, performanse i kod koji je lako čitati i nadograđivati.",
+      "cat_website": "Web stranice",
+      "cat_webapp": "Web aplikacije",
       "p1_name": "Moji kućni ljubimci",
       "p1_desc": "Osobna web stranica posvećena vlastitim kućnim ljubimcima. ",
       "p2_name": "Restoran Veritas - testna",
-      "p2_desc": "Web stranica restorana s modernim dizajnom, prikazom menija i informacijama o lokaciji."
+      "p2_desc": "Web stranica restorana s modernim dizajnom, prikazom menija i informacijama o lokaciji.",
+      "p3_name": "Budget",
+      "p3_desc": "Praćenje mjesečnih troškova — u doradi."
     },
     "contact": {
       "label": "Kontakt",
@@ -174,10 +178,14 @@
       "in_progress": "In progress",
       "tech_title": "Technologies",
       "tech_desc": "Focused on modern web development — user experience, performance and code that is easy to read and extend.",
+      "cat_website": "Websites",
+      "cat_webapp": "Web Apps",
       "p1_name": "My Pets",
       "p1_desc": "A personal website dedicated to pets. This project is currently in progress.",
       "p2_name": "Restaurant Veritas",
-      "p2_desc": "A restaurant website with modern design, menu display and location information."
+      "p2_desc": "A restaurant website with modern design, menu display and location information.",
+      "p3_name": "Budget",
+      "p3_desc": "Monthly expense tracker — work in progress."
     },
     "contact": {
       "label": "Contact",
@@ -274,10 +282,14 @@
       "in_progress": "In Bearbeitung",
       "tech_title": "Technologien",
       "tech_desc": "Fokussiert auf moderne Webentwicklung — Benutzererfahrung, Performance und lesbarer Code.",
+      "cat_website": "Webseiten",
+      "cat_webapp": "Web-Apps",
       "p1_name": "Meine Haustiere",
       "p1_desc": "Eine persönliche Website für Haustiere. Das Projekt ist derzeit in Bearbeitung.",
       "p2_name": "Restaurant Veritas",
-      "p2_desc": "Eine Restaurant-Website mit modernem Design, Menüanzeige und Standortinformationen."
+      "p2_desc": "Eine Restaurant-Website mit modernem Design, Menüanzeige und Standortinformationen.",
+      "p3_name": "Budget",
+      "p3_desc": "Monatliche Ausgabenerfassung — in Bearbeitung."
     },
     "contact": {
       "label": "Kontakt",
@@ -374,10 +386,14 @@
       "in_progress": "In corso",
       "tech_title": "Tecnologie",
       "tech_desc": "Concentrata sullo sviluppo web moderno — esperienza utente, performance e codice leggibile.",
+      "cat_website": "Siti web",
+      "cat_webapp": "Web App",
       "p1_name": "I miei animali",
       "p1_desc": "Un sito personale dedicato agli animali domestici. Il progetto è attualmente in corso.",
       "p2_name": "Ristorante Veritas",
-      "p2_desc": "Un sito per ristorante con design moderno, visualizzazione del menu e informazioni sulla posizione."
+      "p2_desc": "Un sito per ristorante con design moderno, visualizzazione del menu e informazioni sulla posizione.",
+      "p3_name": "Budget",
+      "p3_desc": "Monitoraggio delle spese mensili — lavoro in corso."
     },
     "contact": {
       "label": "Contatto",
