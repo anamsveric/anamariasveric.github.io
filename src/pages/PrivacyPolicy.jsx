@@ -39,7 +39,7 @@ export default function PrivacyPolicy() {
             <p className="font-body text-base text-muted leading-relaxed">
               {p.ads_p3}{' '}
               <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer"
-                className="text-accent underline underline-offset-4 hover:text-blue-700 transition-colors">
+                className="text-accent underline underline-offset-4 hover:text-pink-700 transition-colors">
                 {p.ads_link}
               </a>.
             </p>
@@ -51,7 +51,7 @@ export default function PrivacyPolicy() {
             <p className="font-body text-base text-muted leading-relaxed">
               {p.data_p2}{' '}
               <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer"
-                className="text-accent underline underline-offset-4 hover:text-blue-700 transition-colors">
+                className="text-accent underline underline-offset-4 hover:text-pink-700 transition-colors">
                 {p.data_link}
               </a>.
             </p>
@@ -75,7 +75,7 @@ export default function PrivacyPolicy() {
             <p className="font-body text-base text-muted leading-relaxed">
               {p.contact_text}{' '}
               <Link to="/kontakt"
-                className="text-accent underline underline-offset-4 hover:text-blue-700 transition-colors">
+                className="text-accent underline underline-offset-4 hover:text-pink-700 transition-colors">
                 {p.contact_link}
               </Link>.
             </p>

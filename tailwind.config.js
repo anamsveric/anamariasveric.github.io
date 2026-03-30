@@ -14,7 +14,7 @@ export default {
       colors: {
         cream: '#F7F3EE',
         ink: '#0F172A',
-        accent: '#2563EB',
+        accent: '#E91E8C',
         muted: '#64748B',
         surface: '#FFFFFF',
         dark: '#0F172A',

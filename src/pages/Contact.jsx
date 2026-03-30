@@ -30,25 +30,107 @@ export default function Contact() {
   const { t } = useLang()
 
   return (
-    <main className="bg-[#F7F3EE] min-h-screen">
+    <main className="relative z-10 min-h-screen">
 
       {/* ── HEADER ── */}
-      <section className="pt-32 pb-16">
-        <div className="max-w-6xl mx-auto px-6">
-          <p className="font-body text-xs font-semibold tracking-widest text-accent uppercase mb-3">{t.contact.label}</p>
-          <h1 className="font-display text-5xl md:text-6xl font-bold text-ink leading-tight mb-6">{t.contact.title}</h1>
-          <p className="font-body text-base text-muted max-w-xl leading-relaxed">{t.contact.subtitle}</p>
+      <section className="pt-28 sm:pt-32 pb-12 sm:pb-16 bg-white/80 backdrop-blur-sm">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-ink mb-4">{t.contact.title}</h1>
+          <nav className="flex items-center justify-center gap-2 font-body text-sm text-muted">
+            <Link to="/" className="hover:text-accent transition-colors">{t.nav.home}</Link>
+            <svg className="w-4 h-4 text-muted/50" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+            <span className="text-accent font-medium">{t.nav.contact}</span>
+          </nav>
         </div>
       </section>
 
-      {/* ── SADRŽAJ ── */}
-      <section className="border-t border-black/5 py-16">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-start">
+      {/* ── 3 KONTAKT KARTICE ── */}
+      <section className="py-12 sm:py-16 bg-white/70 backdrop-blur-sm">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6">
 
-            {/* Lijevo */}
-            <div className="space-y-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
 
+            {/* Adresa */}
+            <div className="bg-[#F5F5F5] rounded-2xl p-8 text-center border border-black/5 border-b-2 border-l-2 border-b-accent border-l-accent hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+              <div className="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-5">
+                <svg className="w-7 h-7 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <h3 className="font-display text-xl font-bold text-ink mb-3">{t.contact.address_label}</h3>
+              <p className="font-body text-sm text-muted">{t.contact.address_line1}</p>
+              <p className="font-body text-sm text-muted">{t.contact.address_line2}</p>
+            </div>
+
+            {/* Email */}
+            <div className="bg-[#F5F5F5] rounded-2xl p-8 text-center border border-black/5 border-b-2 border-l-2 border-b-accent border-l-accent hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+              <div className="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-5">
+                <svg className="w-7 h-7 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h3 className="font-display text-xl font-bold text-ink mb-3">{t.contact.email_label}</h3>
+              <a href="mailto:anamaria.sveric@gmail.com" className="font-body text-sm text-muted hover:text-accent transition-colors duration-300">
+                anamaria.sveric@gmail.com
+              </a>
+            </div>
+
+            {/* Telefon */}
+            <div className="bg-[#F5F5F5] rounded-2xl p-8 text-center border border-black/5 border-b-4 border-b-accent hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+              <div className="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-5">
+                <svg className="w-7 h-7 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+              </div>
+              <h3 className="font-display text-xl font-bold text-ink mb-3">{t.contact.call_label}</h3>
+              <p className="font-body text-sm text-muted italic">{t.contact.call_text}</p>
+            </div>
+
+          </div>
+
+          {/* Karta - ispod kartica */}
+          <div className="rounded-2xl overflow-hidden border border-black/5 border-b-2 border-l-2 border-b-accent border-l-accent shadow-sm" style={{ height: '420px' }}>
+            <iframe
+              title="Lokacija - Pula"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=13.8396%2C44.8660%2C13.8476%2C44.8700&layer=mapnik&marker=44.8680%2C13.8436"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+            />
+          </div>
+
+        </div>
+      </section>
+
+      {/* ── SOCIJALNE MREŽE + CV ── */}
+      <section className="border-t border-black/5 py-12 sm:py-16 bg-white/60 backdrop-blur-sm">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+          <div className="grid md:grid-cols-2 gap-8 sm:gap-12">
+
+            {/* Socijalne mreže */}
+            <div>
+              <h2 className="font-display text-2xl font-bold text-ink mb-6">{t.contact.socials_title}</h2>
+              <div className="space-y-3">
+                {socials.map(({ label, href, icon }) => (
+                  <a key={label} href={href} target="_blank" rel="noopener noreferrer"
+                    className="flex items-center gap-4 bg-white rounded-2xl px-5 py-4 border border-black/5 border-b-2 border-l-2 border-b-accent border-l-accent shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 group">
+                    <span className="text-muted group-hover:text-accent transition-colors duration-300">{icon}</span>
+                    <span className="font-body text-sm font-medium text-ink group-hover:text-accent transition-colors duration-300">{label}</span>
+                    <svg className="w-4 h-4 text-muted ml-auto group-hover:text-accent group-hover:translate-x-0.5 transition-all duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            {/* CV + Usluge */}
+            <div className="space-y-6">
               <div>
                 <h2 className="font-display text-2xl font-bold text-ink mb-5">{t.contact.services_title}</h2>
                 <ul className="space-y-3">
@@ -61,90 +143,12 @@ export default function Contact() {
                 </ul>
               </div>
 
-              {/* Telefon */}
-              <div className="bg-white rounded-2xl p-6 border border-black/5 shadow-sm">
-                <div className="flex items-center gap-4">
-                  <div className="w-11 h-11 rounded-xl bg-green-50 flex items-center justify-center shrink-0">
-                    <svg className="w-5 h-5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="font-body text-xs font-semibold tracking-widest text-muted uppercase mb-1">Telefon</p>
-                    <p className="font-body text-sm text-muted italic">privremeno nedostupno</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Email */}
-              <div className="bg-white rounded-2xl p-6 border border-black/5 shadow-sm">
-                <div className="flex items-center gap-4">
-                  <div className="w-11 h-11 rounded-xl bg-blue-50 flex items-center justify-center shrink-0">
-                    <svg className="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="font-body text-xs font-semibold tracking-widest text-muted uppercase mb-1">{t.contact.email_label}</p>
-                    <a href="mailto:anamaria.sveric@gmail.com" className="font-body text-base text-ink hover:text-accent transition-colors duration-300">
-                      anamaria.sveric@gmail.com
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              {/* Lokacija */}
-              <div className="bg-white rounded-2xl p-6 border border-black/5 shadow-sm">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-11 h-11 rounded-xl bg-orange-50 flex items-center justify-center shrink-0">
-                    <svg className="w-5 h-5 text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="font-body text-xs font-semibold tracking-widest text-muted uppercase mb-1">{t.contact.location_label}</p>
-                    <p className="font-body text-base text-ink">{t.contact.location_text}</p>
-                  </div>
-                </div>
-                <div className="rounded-xl overflow-hidden border border-black/5" style={{ height: '200px' }}>
-                  <iframe
-                    title="Lokacija"
-                    src="https://www.openstreetmap.org/export/embed.html?bbox=13.8396%2C44.8660%2C13.8476%2C44.8700&layer=mapnik&marker=44.8680%2C13.8436"
-                    width="100%" height="100%" style={{ border: 0 }}
-                    allowFullScreen="" loading="lazy"
-                  />
-                </div>
-              </div>
-
-            </div>
-
-            {/* Desno */}
-            <div className="space-y-10">
-
-              <div>
-                <h2 className="font-display text-2xl font-bold text-ink mb-5">{t.contact.socials_title}</h2>
-                <div className="space-y-3">
-                  {socials.map(({ label, href, icon }) => (
-                    <a key={label} href={href} target="_blank" rel="noopener noreferrer"
-                      className="flex items-center gap-4 bg-white rounded-2xl px-5 py-4 border border-black/5 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 group">
-                      <span className="text-muted group-hover:text-accent transition-colors duration-300">{icon}</span>
-                      <span className="font-body text-sm font-medium text-ink group-hover:text-accent transition-colors duration-300">{label}</span>
-                      <svg className="w-4 h-4 text-muted ml-auto group-hover:text-accent group-hover:translate-x-0.5 transition-all duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </a>
-                  ))}
-                </div>
-              </div>
-
-              {/* CV */}
-              <div className="bg-white rounded-2xl p-6 border border-black/5 shadow-sm">
+              <div className="bg-white rounded-2xl p-6 border border-black/5 border-b-2 border-l-2 border-b-accent border-l-accent shadow-sm">
                 <p className="font-body text-base font-semibold text-ink mb-1">{t.contact.cv_title}</p>
                 <p className="font-body text-sm text-muted mb-4">{t.contact.cv_desc}</p>
                 <div className="flex items-center gap-3">
                   <a href="/cv.pdf#toolbar=0&navpanes=0&scrollbar=0" target="_blank" rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 font-body text-sm font-medium text-white bg-accent px-5 py-2.5 rounded-full hover:bg-blue-700 transition-colors duration-300">
+                    className="inline-flex items-center gap-2 font-body text-sm font-medium text-white bg-accent px-5 py-2.5 rounded-full hover:opacity-90 transition-opacity duration-300">
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                     </svg>
@@ -153,15 +157,15 @@ export default function Contact() {
                   <span className="font-body text-xs text-muted">{t.contact.cv_updated} {CV_UPDATED}</span>
                 </div>
               </div>
-
             </div>
+
           </div>
         </div>
       </section>
 
       {/* ── FOOTER ── */}
-      <footer className="border-t border-black/5">
-        <div className="max-w-6xl mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center gap-4">
+      <footer className="border-t border-black/5 bg-white/80 backdrop-blur-sm">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
           <p className="font-body text-sm text-muted">© {new Date().getFullYear()} Anamaria Sverić. {t.footer.rights}</p>
           <p className="font-body text-sm text-muted">{t.footer.made}</p>
           <Link to="/privacy" className="font-body text-sm text-muted hover:text-ink transition-colors duration-300">

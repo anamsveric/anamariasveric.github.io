@@ -29,7 +29,7 @@ export default function CookieBanner() {
       >
         <p className="font-body text-sm text-muted flex-1 leading-relaxed">
           Koristimo kolačiće za prikazivanje oglasa putem Google AdSense-a.{' '}
-          <Link to="/privacy" className="text-accent underline underline-offset-4 hover:text-blue-700 transition-colors">
+          <Link to="/privacy" className="text-accent underline underline-offset-4 hover:text-pink-700 transition-colors">
             Saznaj više
           </Link>
           .
@@ -43,7 +43,7 @@ export default function CookieBanner() {
           </button>
           <button
             onClick={accept}
-            className="font-body text-sm text-white font-semibold bg-accent px-5 py-2 rounded-full hover:bg-blue-700 transition-colors duration-300"
+            className="font-body text-sm text-white font-semibold bg-accent px-5 py-2 rounded-full hover:bg-pink-700 transition-colors duration-300"
           >
             Prihvati
           </button>
